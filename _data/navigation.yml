@@ -1,0 +1,31 @@
+# main links
+main:
+  - title: "Home"
+    url: /
+  # - title: "大數据"
+  #   url: /bigdata/
+  # - title: "Docker"
+  #   url: /docker/introduction/   
+  # - title: "Quick-Start Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "Categories"
+    url: /categories/
+  - title: "eBook"
+    url: /collection-archive/
+  - title: "Archives"
+    url: /year-archive/
+    # - title: "Sitemap"
+  #   url: /sitemap/
+
+# documentation links
+docker:
+  - title: 1. Docker Quick Start
+    children:
+      - title: "1.1 Docker簡介"
+        url: /docker/introduction/
+      - title: "1.2 安裝Docker Community Edition"
+        url: /docker/installation/  
+      - title: "1.3 建立第一個軟體貨櫃 (Application Container)"
+        url: /docker/first-container/  
