@@ -18,19 +18,19 @@ minimal_mistakes_skin    : "air" # "default" , "air", "aqua", "contrast", "dark"
 locale                   : "zh-TW" #"en-US"
 title                    : "DSA Learning"
 title_separator          : "-"
-subtitle                 : "腦袋記不住的事，就把它記錄下來吧。" # site tagline that appears below site title in masthead
+subtitle                 : "~ 腦袋記不住的事，就把它記錄下來吧。 ~" # site tagline that appears below site title in masthead
 name                     : "Alvin Lin"
-description              : "資料經整理而成為有用的資訊，資訊經分析而萃煉為有價值的智慧."
+description              : "資料經整理而成為有用的資訊，資訊經分析而萃煉為有價值的智慧，這就是DSA Learning學習的目標。"
 url                      : "https://dsalearning.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : #"/assets/images/DSALearning_500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/dsa_logo_88x55.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 300
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "facebook" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -309,7 +309,7 @@ defaults:
       read_time: false
       author_profile: false
       share: false
-      comments: false
+      comments: true
       sidebar:
         nav: "docker"     
   # _bigdata
