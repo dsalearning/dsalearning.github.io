@@ -112,7 +112,15 @@ $ sudo nano /home/pi/.jupyter/jupyter_notebook_config.py
 
 
 ## 心得
-在安裝Jupyter Notebook後，可以正常啟動，但是執行時並沒有把執行結果輸出到畫面。
+在安裝Jupyter Notebook曾遇到過，可以正常啟動，但是執行時並沒有把執行結果輸出到畫面。因為在安裝時有出現下列的錯誤
+```
+ImportError: cannot import name 'create_prompt_application' from 'prompt_toolkit.shortcuts' (/usr/local/lib/python3.7/dist-packages/prompt_toolkit/shortcuts/__init__.py)
+```
+解決的方式就是執行下列的命令
+```bash
+$ sudo pip3 install 'prompt-toolkit==1.0.15'
+```
+這時再重新啟動Jupyter Notebook，就可能正常的輸出了，原因可能是沒有執行本篇的安裝前準備吧。
 
 ## 參考文章 ##
 1. [Jupyter Notebook on Raspberry Pi](https://www.instructables.com/id/Jupyter-Notebook-on-Raspberry-Pi/)
