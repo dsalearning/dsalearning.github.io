@@ -3,13 +3,6 @@ title:  "樹莓派安裝Raspbian作業系統"
 excerpt: "Raspberry Pi 4 出來了，和之前的版本最大的改變是多了 2GB/4GB 的記憶體版本可供選擇！"
 header:
   teaser: assets/images/raspberry-pi-4-model-b.jpg
-sidebar:
-  - title: "進修課程名稱"
-    text: "物聯網樹莓派通訊程式與影像運用實務班"
-  - title: "進修日期"
-    text: "2020/03/14~2020/05/23"
-  - title: "講師"
-    text: "徐國堂"
 search: false
 categories: 
   - AIoT
