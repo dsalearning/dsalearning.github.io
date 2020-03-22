@@ -429,7 +429,7 @@ zh-TW: &DEFAULT_ZH_HANT
   pagination_previous        : "上一篇"
   pagination_next            : "下一篇"
   breadcrumb_home_label      : "首頁"
-  breadcrumb_separator       : "/"
+  breadcrumb_separator       : ">"
   menu_label                 : "切換選單"
   search_label               :
   toc_label                  : "本頁"

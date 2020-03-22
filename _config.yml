@@ -12,14 +12,14 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "default" , "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "default" , "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "zh-TW" #"en-US"
 title                    : "DSA Learning"
 title_separator          : "-"
 subtitle                 : "~ 腦袋記不住的事，就把它記錄下來吧。 ~" # site tagline that appears below site title in masthead
-name                     : "Alvin Lin"
+name                     : "D S A"
 description              : "資料經整理而成為有用的資訊，資訊經分析而萃煉為有價值的智慧，這就是DSA Learning學習的目標。"
 url                      : "https://dsalearning.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -107,11 +107,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Alvin Lin"
-  avatar           : "/assets/images/bio-alvin.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : ""
+  name             : "D S A"
+  avatar           : "/assets/images/bio-dsa.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "資料經整理而成為有用的資訊，資訊經分析而萃煉為有價值的智慧"
   location         : "台北市, 古亭"
-  email            :
+  # email            : "alvinlin.dsa@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -216,7 +216,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: # Asia/Taipei # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -308,7 +308,7 @@ defaults:
       layout: single
       read_time: false
       author_profile: false
-      share: false
+      share: true
       comments: true
       sidebar:
         nav: "docker"     

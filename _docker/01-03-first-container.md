@@ -11,8 +11,6 @@ tags:
   - container
 ---
 
-[上一篇]()
-
 ## 安裝 Docker CE
 在安裝 Docker CE[^get_docker_ce]之前，必需先在系統上安裝 Docker 的環境，這裡示範在 Ubuntu Linux 中的安裝步驟。
 
