@@ -3,6 +3,13 @@ title:  "Python IDE PyCharm安裝"
 excerpt: "PyCharm 是一款功能強大的 Python 編輯器，具有跨平台性，版本有付費的Professional專業版與免費的Community社群版。"
 header:
   teaser: assets/images/pycharm_logo.png
+sidebar:
+  - title: "進修課程名稱"
+    text: "物聯網樹莓派通訊程式與影像運用實務班"
+  - title: "進修日期"
+    text: "2020/03/14~2020/05/23"
+  - title: "講師"
+    text: "徐國堂"
 search: false
 categories: 
   - Programming

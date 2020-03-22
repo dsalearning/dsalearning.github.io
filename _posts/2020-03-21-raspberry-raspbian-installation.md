@@ -1,5 +1,5 @@
 ---
-title:  "樹莓派安裝Raspbian"
+title:  "樹莓派安裝Raspbian作業系統"
 excerpt: "Raspberry Pi 4 出來了，和之前的版本最大的改變是多了 2GB/4GB 的記憶體版本可供選擇！"
 header:
   teaser: assets/images/raspberry-pi-4-model-b.jpg
@@ -33,8 +33,8 @@ toc: true
 * 記憶卡(SD Card) : 建議容量16GB以上[^sd-cards]，速度等級建議Class 10。系統安裝最小建議是8GB，但安裝完系統後僅剩1GB，想再安裝其它軟體就很困難了。
 * 讀卡機 : 準備利用電腦把樹莓派影像檔燒錄到SD Card。
 * 電源接頭(Power) : 使用 USB-C，使用 5V/3A 以上電源供應器才能穩定使用。
-* 視訊接頭(Video) :  type-D (micro) HDMI 接頭，micro HDMI to HDMI cable。
-* 螢幕 : 利用上速的視訊接頭，把樹莓派的系統影像輸出到螢幕，這樣比較方便設定。僅安裝後的第一次需要，之後就利用遠端桌面的工具登入操作。
+* 視訊接頭(Video) :  type-D (micro) HDMI 接頭，就是micro HDMI to HDMI cable。
+* 螢幕 : 利用上述的視訊接頭，把樹莓派的系統影像輸出到螢幕，這樣比較方便設定。僅安裝後的第一次需要，之後就利用遠端桌面的工具登入操作。
 
 [^sd-cards]: [the SD card requirements](https://www.raspberrypi.org/documentation/installation/sd-cards.md).
 
