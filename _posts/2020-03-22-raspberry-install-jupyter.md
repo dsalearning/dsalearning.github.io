@@ -20,8 +20,8 @@ toc: true
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/raspberry-pi-install-jupyter-notebook.png" alt="">
 </figure> 
 
-## 安裝前準備
-### 1. 登入root帳號
+## 前置安裝
+### 1. 登入root系統管理員帳號
 ```bash
 $ sudo su -
 ```
