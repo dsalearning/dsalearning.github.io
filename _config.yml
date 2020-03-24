@@ -18,9 +18,9 @@ minimal_mistakes_skin    : "default" # "default" , "air", "aqua", "contrast", "d
 locale                   : "zh-TW" #"en-US"
 title                    : "DSA Learning"
 title_separator          : "-"
-subtitle                 : "~ 腦袋記不住的事，就把它記錄下來吧。 ~" # site tagline that appears below site title in masthead
+subtitle                 : "資料經整理與分析而萃煉為有價值的智慧" # site tagline that appears below site title in masthead
 name                     : "Alvin Lin"
-description              : "資料經整理而成為有用的資訊，資訊經分析而萃煉為有價值的智慧，這就是DSA Learning學習的目標。"
+description              : "~ 腦袋記不住的事，就把它記錄下來吧。 ~"
 url                      : "https://dsalearning.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -109,7 +109,7 @@ analytics:
 author:
   name             : "Alvin Lin"
   avatar           : "/assets/images/bio-dsa.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "資料經整理而成為有用的資訊，資訊經分析而萃煉為有價值的智慧"
+  bio              : "~ 腦袋記不住的事，就把它記錄下來吧。 ~"
   location         : "台北市, 古亭"
   # email            : "alvinlin.dsa@gmail.com"
   links:
@@ -296,7 +296,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
       share: true
       related: true
@@ -319,6 +319,6 @@ defaults:
     values:
       layout: single
       author_profile: false
-      read_time: true
+      read_time: false
       comments: true
       share: true
