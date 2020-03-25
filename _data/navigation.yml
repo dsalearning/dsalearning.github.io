@@ -2,21 +2,13 @@
 main:
   - title: "Home"
     url: /
-  # - title: "大數据"
-  #   url: /bigdata/
-  # - title: "Docker"
-  #   url: /docker/introduction/   
-  # - title: "Quick-Start Guide"
-  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Categories"
     url: /categories/
-  - title: "Learning"
-    url: /collection-archive/
   - title: "Archives"
     url: /year-archive/
-    # - title: "Sitemap"
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sitemap"
   #   url: /sitemap/
 
 # documentation links

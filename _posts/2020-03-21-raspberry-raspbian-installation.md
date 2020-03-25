@@ -22,11 +22,11 @@ toc: true
 </figure> 
 
 ## 前置準備
-* [Raspberry Pi 4 Model B](https://www.raspberrypi.com.tw/28040/raspberry-pi-4-model-b/) ： 和之前的版本最大的改變是多了 2GB/4GB 的記憶體版本可供選擇，本次使用的是4GB版。
-* 記憶卡(SD Card) : 建議容量16GB以上[^sd-cards]，速度等級建議Class 10。系統安裝最小建議是8GB，但安裝完系統後僅剩1GB，想再安裝其它軟體就很困難了。
-* 讀卡機 : 準備利用電腦把樹莓派映像檔燒錄到SD Card。
+* [Raspberry Pi 4 Model B](https://www.raspberrypi.com.tw/28040/raspberry-pi-4-model-b/) ： 和之前的版本最大的改變是多了 2GB/4GB 的記憶體版本可供選擇，本次使用的是 4GB 版。
+* 記憶卡 (SD Card) : 建議容量 16GB 以上[^sd-cards]，速度等級建議 Class 10。系統安裝最小建議是 8GB ，但安裝完系統後僅剩 1GB ，想再安裝其它軟體就很困難了。
+* 讀卡機 : 準備利用電腦把樹莓派映像檔燒錄到 SD Card。
 * 電源接頭(Power) : 使用 USB-C，使用 5V/3A 以上電源供應器才能穩定使用。
-* 視訊接頭(Video) :  type-D (micro) HDMI 接頭，就是micro HDMI to HDMI cable。
+* 視訊接頭(Video) :  type-D (micro) HDMI 接頭，也就是 micro HDMI to HDMI cable。
 * 螢幕 : 利用上述的視訊接頭，把樹莓派的系統影像輸出到螢幕，這樣比較方便設定。僅安裝後的第一次需要，之後就利用遠端桌面的工具登入操作。
 
 [^sd-cards]: [the SD card requirements](https://www.raspberrypi.org/documentation/installation/sd-cards.md).
@@ -43,12 +43,15 @@ toc: true
 
 #### 1. 下載樹莓派映像檔
 至[官網](https://www.raspberrypi.org/downloads/)下載最新的樹莓派映像檔（Raspberry Pi Imager)並安裝它。
+<figure>
+  <img src="{{ '/assets/images/raspberry-pi-imager-download.png' | relative_url }}" alt="Raspberry Pi Imager">
+</figure>
 
 #### 2. 執行樹莓派映像檔
-* 打開剛安裝好的Raspberry Pi Imager，
-* 這時請把你的SD卡插入讀卡機並連接到電腦，確定電腦有抓到這個碟，
-* 接著選擇OS與安裝的磁碟，請務必挑選讀卡機的SD Card，
-* 都確定後就按 [WRITE](#link){: .btn .btn--primary } ，接下來就看你SD Card的速度等級嘍，筆者我的卡太老舊，在這可是等了不少時間。
+* 打開剛安裝好的 Raspberry Pi Imager，
+* 這時請把你的 SD 卡插入讀卡機並連接到電腦，確定電腦有抓到這個碟，
+* 接著選擇 OS 與安裝的磁碟，請務必挑選讀卡機的 SD Card，
+* 都確定後就按 [WRITE](#link){: .btn .btn--primary } ，接下來就看你 SD Card 的速度等級嘍，筆者我的卡太老舊，在這可是等了不少時間。
 
 <figure>
   <img src="{{ '/assets/images/raspberry-pi-imager.png' | relative_url }}" alt="Raspberry Pi Imager">
@@ -62,7 +65,7 @@ toc: true
 
 #### 3. 連線與設定
 
-這時先把Micro HDMI連接到螢幕，鍵盤滑鼠也都接上，網路可以進入桌面後再設定，都確認接好後，接上電源吧。
+這時先把 Micro HDMI 連接到螢幕，鍵盤滑鼠也都接上，網路可以進入桌面後再設定，都確認接好後，接上電源吧。
 成功進入系統了，接著就依照說明設定語系與網路吧。
 
 <figure>
@@ -70,7 +73,7 @@ toc: true
 </figure>
 
 ### 安裝Raspbian(方法二)
-這個方法可以參考官網的 [Using other tools](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) ，這裡筆者準備了第二張卡，是新買的32GB，當時賣家告知之前有客戶買了某某大廠的卡，但樹莓派卻挑卡讀不到！於是選了另一家大廠的卡，想說我的8GB舊卡都可以安裝了，不會這麼雷吧！接下來就按照下列程序安裝嘍。
+這個方法可以參考官網的 [Using other tools](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) ，這裡筆者準備了第二張卡，是新買的 32GB ，當時賣家告知之前有客戶買了某某大廠的卡，但樹莓派卻挑卡讀不到！於是選了另一家大廠的卡，想說我的 8GB 舊卡都可以安裝了，不會這麼雷吧！接下來就按照下列程序安裝嘍。
 
 #### 1. 下載必要軟體
 * [7-Zip](http://www.7-zip.org/) (Windows)。
@@ -96,7 +99,7 @@ toc: true
 
 #### 5. 開啟 balenaEtcher
 * 選取映像檔
-* 選取SD Card，記得把卡插到讀卡機並連接到電腦。
+* 選取 SD Card，記得把卡插到讀卡機並連接到電腦。
 * 上述二個都確認後，按 [Flash!](#link){: .btn .btn--info} 開始燒錄。
 
 
@@ -120,7 +123,7 @@ toc: true
 
 ## 安裝遠端桌面
 
-為了能讓本機可以透過遠端連線至樹莓派，這裡選用的是 「Microsoft遠端桌面」，這樣你可以透過電腦、平板與手機等（以下簡稱Client端）連線到樹莓派。 
+為了能讓本機可以透過遠端連線至樹莓派，這裡選用的是「 Microsoft 遠端桌面」，這樣你可以透過電腦、平板與手機等（以下簡稱 Client 端）連線到樹莓派。 
 
 在樹莓派的工作列打開終端機(Terminal)，如下圖
 <img src="{{ '/assets/images/raspberry-pi-taskbar.png' | relative_url }}" alt="Raspberry Pi Taskbar">
@@ -131,7 +134,7 @@ toc: true
 $ sudo apt-get -y install xrdp
 ```
 
-安裝完畢後，你也必須在Client端安裝「Microsoft遠端桌面」，這時你需要知道樹莓派的IP才能遠端連線，請在樹莓派的終端機輸入下列指令。
+安裝完畢後，你也必須在 Client 端安裝「 Microsoft 遠端桌面」，這時你需要知道樹莓派的IP才能遠端連線，請在樹莓派的終端機輸入下列指令。
 
 ```bash
 $ ifconfig
@@ -143,7 +146,7 @@ $ ifconfig
   <img src="{{ '/assets/images/raspberry-pi-get-ipconfig.png' | relative_url }}" alt="Raspberry Pi ifconfig">
 </figure>
 
-當Client端的遠端桌面程式準備好與知道樹莓派的IP後，打開Client端的遠端桌面程式新增PC，如下圖
+當 Client 端的遠端桌面程式準備好與知道樹莓派的IP後，打開 Client 端的遠端桌面程式新增 PC ，如下圖
 <figure>
   <img src="{{ '/assets/images/raspberry-pi-rdp-add-pc.png' | relative_url }}" alt="">
 </figure>
@@ -152,11 +155,11 @@ $ ifconfig
   <a href="/assets/images/raspberry-pi-rdp-login.png"><img src="/assets/images/raspberry-pi-rdp-login.png"></a>
 </figure>
 
-這時你的樹莓派還連接著螢幕，而你的Client端也連入了樹莓派，就像遠端到Server一樣可以有各自的環境執行，不過Windows預設是有二個遠端連線，那樹莓派會有幾個呢？
+這時你的樹莓派還連接著螢幕，而你的 Client 端也連入了樹莓派，就像遠端到 Server 一樣可以有各自的環境執行，不過 Windows 預設是有二個遠端連線，那樹莓派會有幾個呢？
 
 ## 心得
-一開始準備了一張8GB的SD Card，相當有年份的一張卡，它的燒錄速度真的很慢，約20多分鐘，但系統都安裝好後，系統效能的反應還能接受。
+一開始準備了一張 8GB 的 SD Card，相當有年份的一張卡，它的燒錄速度真的很慢，約20多分鐘，但系統都安裝好後，系統效能的反應還能接受。
 
-在安裝時，一開始使用方法一，但到Verify的作業時卻跳出錯誤，後來改用方法二的解壓映像檔方式，要注意的事是SD Card要先格式化(Format)，及解壓的軟件要慎選，官方寫說必須使用支援ZIP64，後來使用7zip解壓縮就正常。
+在安裝時，一開始使用方法二，但到 Validating 的作業時卻跳出錯誤，後來改用另一個燒錄程式 (Win32DiskImager) 就可以，不過上述的方法筆者試過也都正常。方法二的解壓映像檔方式，要注意的事是 SD Card 要先格式化 (Format) ，及解壓的軟件要慎選，官方寫說必須使用支援 ZIP64 ，後來使用 7zip 解壓縮就正常。
 
 ## 參考文章 ##
