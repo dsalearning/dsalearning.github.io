@@ -76,13 +76,11 @@ Werkzeug          0.14.1
 wheel             0.32.3     
 wrapt             1.10.11    
 ```
-* (錯誤) 安裝 `virtualenv` 程式，若上述有看過該程式則可以略過此步驟。
+* [失敗](#link){: .btn .btn--danger}安裝 `virtualenv` 程式，若上述有看過該程式則可以略過此步驟。
 ```bash
 $ pip3 install virtualenv
 ```
-
-**注意：**筆者一開始沒有用系統管理員 `sudo` 去建立，結果就出現了 `WARNING` ，之後導致無法建立虛擬環境，所以一定要用 系統管理員 `sudo` 建立。
-{: .notice--info}
+筆者一開始沒有用系統管理員 `sudo` 去建立，結果就出現了 `WARNING` ，之後導致無法建立虛擬環境，所以一定要用 系統管理員 `sudo` 建立。
 結果如下
 ```
 pi@raspberrypi:~/Documents/envs $ pip3 install virtualenv
@@ -97,8 +95,7 @@ Successfully installed distlib-0.3.0 filelock-3.0.12 importlib-metadata-1.5.0 vi
 pi@raspberrypi:~/Documents/envs $ virtualenv dsalearning
 bash: virtualenv: command not found
 ```
-
-* (正確) 安裝 `virtualenv` 程式，若上述沒有看到 `WARNING` ，可能你的環境變數已有加了該路徑了吧，正常者可以略過此步驟。
+* [正確](#link){: .btn .btn--success}安裝 `virtualenv` 程式，若上述沒有看到 `WARNING` ，可能你的環境變數已有加了該路徑了吧，正常者可以略過此步驟。
 ```bash
 $ sudo pip3 install virtualenv
 ```
@@ -122,6 +119,7 @@ created virtual environment CPython3.7.3.final.0-32 in 407ms
   seeder FromAppData(download=False, pip=latest, setuptools=latest, wheel=latest, via=copy, app_data_dir=/root/.local/share/virtualenv/seed-app-data/v1.0.1)
   activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
 ```
+
 ## 檢查虛擬環境
 * 檢查目錄
 ```bash
@@ -137,26 +135,24 @@ drwxr-xr-x 4 root root 4096 Mar 26 00:18 dsalearning
 ```
 
 ## 進入虛擬環境
+* 切換到 `dsalearning` 目錄
 ```bash
 $ cd dsalearning
-$ ls -al
+```
+* 進入 `dsalearning` 環境
+```bash
 $ source bin/activate
 ```
 結果如下
 ```
-pi@raspberrypi:~/Documents/envs/dsalearning $ ls -al
-total 20
-drwxr-xr-x 4 root root 4096 Mar 26 00:18 .
-drwxr-xr-x 3 root root 4096 Mar 26 00:18 ..
-drwxr-xr-x 2 root root 4096 Mar 26 00:18 bin
-drwxr-xr-x 3 root root 4096 Mar 26 00:18 lib
--rw-r--r-- 1 root root  202 Mar 26 00:18 pyvenv.cfg
+pi@raspberrypi:~/Documents/envs $ cd dsalearning
 pi@raspberrypi:~/Documents/envs/dsalearning $ source bin/activate
 (dsalearning) pi@raspberrypi:~/Documents/envs/dsalearning $ 
 ```
-
+這時會看到使用者帳號 `pi`前多了 `(dsalearning)` 就表示已經進入到這個名稱的虛擬環境。
 
 ## 檢查虛擬環境安裝的程式
+* 檢查已安裝的程式
 ```bash
 $ pip3 list
 ```
@@ -169,13 +165,37 @@ pip        20.0.2
 setuptools 46.1.1 
 wheel      0.34.2 
 ```
+是否發現跟 `base` 未建立之前的差很多，也就是這裡只要安裝你需要的**指定版本**程式即可。
+
 ## 離開虛擬環境
 ```bash
 $ deactivate
 ```
 
+## 刪除虛擬環境
+有時測試或建錯都會有需要把虛擬環境刪除已釋放空間，指令如下。
+```bash
+$ ls -al
+$ sudo rm -r dsalearning/
+$ ls -al
+```
+結果如下
+```
+pi@raspberrypi:~/Documents/envs $ ls -al
+total 12
+drwxr-xr-x 3 root root 4096 Mar 26 00:18 .
+drwxr-xr-x 3 pi   pi   4096 Mar 25 23:01 ..
+drwxr-xr-x 4 root root 4096 Mar 26 00:18 dsalearning
+pi@raspberrypi:~/Documents/envs $ sudo rm -r dsalearning/
+pi@raspberrypi:~/Documents/envs $ ls -al
+total 8
+drwxr-xr-x 2 root root 4096 Mar 26 23:05 .
+drwxr-xr-x 3 pi   pi   4096 Mar 25 23:01 ..
+```
+筆者習慣都要先檢查過才刪除。
 
 ## 心得
+就是走過了上述失敗的過程，才知道用 `sudo` 來安裝，否則權限不夠。
 
 ## 參考文章
 1.[Virtual Environments in Python Made Easy](https://www.sitepoint.com/virtual-environments-python-made-easy/)
