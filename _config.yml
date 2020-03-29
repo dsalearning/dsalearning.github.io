@@ -20,7 +20,7 @@ title                    : "DSA Learning"
 title_separator          : "-"
 subtitle                 : "資料經整理與分析而萃煉為有價值的智慧" # site tagline that appears below site title in masthead
 name                     : "Alvin Lin"
-description              : "~ 腦袋記不住的事，就把它記錄下來吧。 ~"
+description              : # "~ 腦袋記不住的事，就把它記錄下來吧。 ~"
 url                      : "https://dsalearning.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -109,19 +109,22 @@ analytics:
 author:
   name             : "Alvin Lin"
   avatar           : "/assets/images/bio-dsa.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "~ 腦袋記不住的事，就把它記錄下來吧。 ~"
-  location         : "台北市, 古亭"
+  bio              : # "~ 腦袋記不住的事，就把它記錄下來吧。 ~"
+  location         : "虛境, 修仙"
   # email            : "alvinlin.dsa@gmail.com"
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+      icon: "fas fa-fw fa-envelope" #fas fa-fw fa-envelope-square
       url: mailto:alvinlin.dsa@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://dsalearning.github.io"
+      url: "https://alvinlin98.github.io"
     - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+      icon: "fab fa-fw fa-facebook"
       url: "https://www.facebook.com/dsalearning"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/dsa-learning-a766801a5/detail/recent-activity/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/dsalearning"
@@ -131,6 +134,12 @@ author:
     - label: "YouTube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/channel/UCnQ4mcqDcSVgtnGCCCw_MlQ"
+    - label: "Line"
+      icon: "fab fa-fw fa-line"
+      url: 
+    - label: "WeChat"
+      icon: "fab fa-fw fa-weixin"
+      url: 
 
 # Site Footer
 footer:

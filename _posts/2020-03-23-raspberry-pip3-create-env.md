@@ -175,9 +175,7 @@ $ deactivate
 ## 刪除虛擬環境
 有時測試或建錯都會有需要把虛擬環境刪除已釋放空間，指令如下。
 ```bash
-$ ls -al
 $ sudo rm -r dsalearning/
-$ ls -al
 ```
 結果如下
 ```
