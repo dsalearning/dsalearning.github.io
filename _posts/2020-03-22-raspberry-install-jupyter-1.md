@@ -103,7 +103,7 @@ pip 20.0.2 from /home/pi/.local/lib/python3.7/site-packages/pip (python 3.7)
 ```bash
 $ sudo pip3 install jupyter
 ```
-不管筆者也有試過不用 `sudo` 安裝，安裝的指令是 `$ pip install jupyter` ，記住這時的 `pip` 是 `pip3` ，安裝時會有一些 WARNING 出現，但也是可以正常開啟 `jupyter notebook` ，執行程式也是正常，但曾有遇過 `kernel` 連接失敗的情況，不是很清楚是什麼情況，所以建議還是用 `sudo` 來安裝。要注意的是請用上述的命令安裝，，若是用 `$ sudo pip install jupyter` 就會收到下列的錯誤。
+不過筆者也有試過不用 `sudo` 安裝，安裝的指令是 `$ pip install jupyter` ，記住這時的 `pip` 是 `pip3` ，安裝時會有一些 WARNING 出現，但也是可以正常開啟 `jupyter notebook` ，執行程式也是正常，但曾有遇過 `kernel` 連接失敗的情況，不是很清楚是什麼情況，所以建議還是用 `sudo` 來安裝。要注意的是請用上述的命令安裝，，若是用 `$ sudo pip install jupyter` 就會收到下列的錯誤。
 ```
 jupyter-console requires Python '>=3.5' but the running Python is 2.7.16
 ```
