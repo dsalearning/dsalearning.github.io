@@ -120,8 +120,8 @@ created virtual environment CPython3.7.3.final.0-32 in 407ms
   activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
 ```
 
-## 檢查虛擬環境
-* 檢查目錄
+## 變更權限
+* 檢查虛擬環境目錄
 ```bash
 $ ls -al
 ```
@@ -132,6 +132,11 @@ total 12
 drwxr-xr-x 3 root root 4096 Mar 26 00:18 .
 drwxr-xr-x 3 pi   pi   4096 Mar 25 23:01 ..
 drwxr-xr-x 4 root root 4096 Mar 26 00:18 dsalearning
+```
+* 變更目錄權限 <br>
+檢查虛擬環境的目錄發現權限是 `root` 而不是 `pi` ，這個會影響之後用 `pi` 帳號在虛擬環境安裝其它 `package` 時會有問題，因此需要將此虛擬環境的目錄權限變更為 `pi` ，指令如下
+```bash
+$ sudo chown -R pi:pi dsalearning
 ```
 
 ## 進入虛擬環境
@@ -193,7 +198,7 @@ drwxr-xr-x 3 pi   pi   4096 Mar 25 23:01 ..
 筆者習慣都要先檢查過才刪除。
 
 ## 心得
-就是走過了上述失敗的過程，才知道用 `sudo` 來安裝，否則權限不夠。
+就是走過了上述失敗的過程，才知道用 `sudo` 來安裝，且必需把權限再授予 `pi` ，否則權限不夠。
 
 ## 參考文章
 1.[Virtual Environments in Python Made Easy](https://www.sitepoint.com/virtual-environments-python-made-easy/)
