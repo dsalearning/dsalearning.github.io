@@ -7,7 +7,7 @@ search: false
 categories: 
   - AIoT
 tags:
-  - Raspberry Pi
+  - RaspberryPi
   - 樹莓派
   - Raspbian
   - 物聯網

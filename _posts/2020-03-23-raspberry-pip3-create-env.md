@@ -7,7 +7,7 @@ search: false
 categories: 
   - AIoT
 tags:
-  - Raspberry Pi
+  - RaspberryPi
   - 樹莓派
   - Python
   - 物聯網
@@ -133,11 +133,24 @@ drwxr-xr-x 3 root root 4096 Mar 26 00:18 .
 drwxr-xr-x 3 pi   pi   4096 Mar 25 23:01 ..
 drwxr-xr-x 4 root root 4096 Mar 26 00:18 dsalearning
 ```
+發現虛擬環境的目錄權限是 `root` 而不是 `pi` ，這個會影響之後用 `pi` 帳號在虛擬環境安裝其它 `package` 時會有問題，因此需要將此虛擬環境的目錄權限變更為 `pi` 
 * 變更目錄權限 <br>
-檢查虛擬環境的目錄發現權限是 `root` 而不是 `pi` ，這個會影響之後用 `pi` 帳號在虛擬環境安裝其它 `package` 時會有問題，因此需要將此虛擬環境的目錄權限變更為 `pi` ，指令如下
 ```bash
 $ sudo chown -R pi:pi dsalearning
 ```
+* 檢查目錄是否變更
+```bash
+$ ls -al
+```
+結果如下
+```
+pi@raspberrypi:~/Documents/envs $ ls -al
+total 12
+drwxr-xr-x 3 root root 4096 Mar 26 00:18 .
+drwxr-xr-x 3 pi   pi   4096 Mar 25 23:01 ..
+drwxr-xr-x 4 pi   pi   4096 Mar 26 00:18 dsalearning
+```
+已經從 `root` 變更為 `pi` 了。也可以把這個權限變更在 `envs` 這個目錄，這樣之後建的虛擬環境目錄都可以用 `pi` 帳號建立。
 
 ## 進入虛擬環境
 * 切換到 `dsalearning` 目錄
@@ -188,7 +201,7 @@ pi@raspberrypi:~/Documents/envs $ ls -al
 total 12
 drwxr-xr-x 3 root root 4096 Mar 26 00:18 .
 drwxr-xr-x 3 pi   pi   4096 Mar 25 23:01 ..
-drwxr-xr-x 4 root root 4096 Mar 26 00:18 dsalearning
+drwxr-xr-x 4 pi   pi   4096 Mar 26 00:18 dsalearning
 pi@raspberrypi:~/Documents/envs $ sudo rm -r dsalearning/
 pi@raspberrypi:~/Documents/envs $ ls -al
 total 8

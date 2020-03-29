@@ -7,10 +7,10 @@ search: false
 categories: 
   - AIoT
 tags:
-  - Raspberry Pi
+  - RaspberryPi
   - 樹莓派
   - 物聯網
-  - Jupyter Notebook
+  - JupyterNotebook
 last_modified_at: 2020-03-22T21:00-00:00
 toc: true
 ---

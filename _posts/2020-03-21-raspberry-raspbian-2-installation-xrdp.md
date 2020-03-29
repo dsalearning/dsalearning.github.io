@@ -7,7 +7,7 @@ search: false
 categories: 
   - AIoT
 tags:
-  - Raspberry Pi
+  - RaspberryPi
   - 樹莓派
   - 遠端桌面
   - 物聯網
@@ -52,7 +52,7 @@ $ ifconfig
 這時你的樹莓派還連接著螢幕，而你的 Client 端也連入了樹莓派，就像遠端到 Server 一樣可以有各自的環境執行，不過 Windows 預設是有二個遠端連線，那樹莓派會有幾個呢？
 
 ## 心得
-
+就跟在本機建立VM一樣，設備不用再連接螢幕就可以管理與操作該電腦，是管理電腦的必備工具，這個一定要安裝起來。
 
 
 ## 參考文章 ##
