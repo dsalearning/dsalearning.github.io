@@ -2,7 +2,7 @@
 title:  "樹莓派安裝Raspbian作業系統（Windows篇）"
 excerpt: "Raspberry Pi 4 出來了，和之前的版本最大的改變是多了 2GB/4GB 的記憶體版本可供選擇！"
 header:
-  teaser: assets/images/raspberry-pi-4-model-b.jpg
+  teaser: assets/images/raspberrypi/raspberry-pi-4-model-b.jpg
 search: false
 categories: 
   - AIoT
@@ -17,7 +17,7 @@ toc: true
 ---
 
 <figure class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/raspberry-pi-4-model-b.jpg" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/raspberrypi/raspberry-pi-4-model-b.jpg" alt="">
   <figcaption><a href="https://www.raspberrypi.org/blog/raspberry-pi-4-on-sale-now-from-35/" title="Raspberry Pi 4 on sale now from $35">圖片來源：Raspberry Pi 4 on sale now from $35</a>.</figcaption>
 </figure> 
 
@@ -44,7 +44,7 @@ toc: true
 #### 1. 下載樹莓派映像檔
 至[官網](https://www.raspberrypi.org/downloads/)下載最新的樹莓派映像檔（Raspberry Pi Imager)並安裝它。
 <figure>
-  <img src="{{ '/assets/images/raspberry-pi-imager-download.png' | relative_url }}" alt="Raspberry Pi Imager">
+  <img src="{{ '/assets/images/raspberrypi/raspberry-pi-imager-download.png' | relative_url }}" alt="Raspberry Pi Imager">
 </figure>
 
 #### 2. 執行樹莓派映像檔
@@ -54,11 +54,11 @@ toc: true
 * 都確定後就按 [WRITE](#link){: .btn .btn--primary } ，接下來就看你 SD Card 的速度等級嘍，筆者我的卡太老舊，在這可是等了不少時間。
 
 <figure>
-  <img src="{{ '/assets/images/raspberry-pi-imager.png' | relative_url }}" alt="Raspberry Pi Imager">
+  <img src="{{ '/assets/images/raspberrypi/raspberry-pi-imager.png' | relative_url }}" alt="Raspberry Pi Imager">
 </figure>
 洗完澡回來就看到成功的畫面如下
 <figure>
-  <img src="{{ '/assets/images/raspberry-pi-imager-successful.png' | relative_url }}" alt="Raspberry Pi Imager Successful">
+  <img src="{{ '/assets/images/raspberrypi/raspberry-pi-imager-successful.png' | relative_url }}" alt="Raspberry Pi Imager Successful">
 </figure>
 
 如同畫面說的，請把記憶卡拿出來吧！沒錯，系統就這樣安裝好了，可以把卡插到樹莓派的板子上了。
@@ -69,7 +69,7 @@ toc: true
 成功進入系統了，接著就依照說明設定語系與網路吧。
 
 <figure>
-  <img src="{{ '/assets/images/raspberry-pi-configuration.png' | relative_url }}" alt="Raspberry Pi Configuration">
+  <img src="{{ '/assets/images/raspberrypi/raspberry-pi-configuration.png' | relative_url }}" alt="Raspberry Pi Configuration">
 </figure>
 
 ### 安裝Raspbian(方法二)
@@ -81,7 +81,7 @@ toc: true
 * [balenaEtcher](https://www.balena.io/etcher/) , [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/) 或 [imgFlasher](https://www.upswift.io/imgflasher/) 擇一下載，後面我們用 balenaEtcher 來介紹。
 
 <figure>
-  <img src="{{ '/assets/images/raspberry-pi-raspbian-download-zip.png' | relative_url }}" alt="">
+  <img src="{{ '/assets/images/raspberrypi/raspberry-pi-raspbian-download-zip.png' | relative_url }}" alt="">
   <figcaption>下載Raspbian壓縮檔</figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ toc: true
 #### 4. 安裝 balenaEtcher
 打開剛下載的燒錄程式 `balenaEtcher-Setup-1.5.79.exe` 進行安裝，安裝好後啟動該程式如下圖。 
 <figure>
-  <img src="{{ '/assets/images/raspberry-pi-etcher.png' | relative_url }}" alt="">
+  <img src="{{ '/assets/images/raspberrypi/raspberry-pi-etcher.png' | relative_url }}" alt="">
 </figure>
 
 #### 5. 開啟 balenaEtcher
@@ -104,14 +104,14 @@ toc: true
 
 
 <figure class="half">
-  <a href="/assets/images/raspberry-pi-etcher-format.png"><img src="/assets/images/raspberry-pi-etcher-format.png"></a>
-  <a href="/assets/images/raspberry-pi-etcher-flashing.png"><img src="/assets/images/raspberry-pi-etcher-flashing.png"></a>
+  <a href="/assets/images/raspberrypi/raspberry-pi-etcher-format.png"><img src="/assets/images/raspberrypi/raspberry-pi-etcher-format.png"></a>
+  <a href="/assets/images/raspberrypi/raspberry-pi-etcher-flashing.png"><img src="/assets/images/raspberrypi/raspberry-pi-etcher-flashing.png"></a>
   <figcaption>Step 1 - 左圖，選取好映像檔跟記憶卡；Step 2 - 右圖，燒錄中。</figcaption>
 </figure>
 
 <figure class="half">
-  <a href="/assets/images/raspberry-pi-etcher-validating.png"><img src="/assets/images/raspberry-pi-etcher-validating.png"></a>
-  <a href="/assets/images/raspberry-pi-etcher-complete.png"><img src="/assets/images/raspberry-pi-etcher-complete.png"></a>
+  <a href="/assets/images/raspberrypi/raspberry-pi-etcher-validating.png"><img src="/assets/images/raspberrypi/raspberry-pi-etcher-validating.png"></a>
+  <a href="/assets/images/raspberrypi/raspberry-pi-etcher-complete.png"><img src="/assets/images/raspberrypi/raspberry-pi-etcher-complete.png"></a>
   <figcaption>Step 3 - 左圖，檢驗中；Step 4 - 右圖，完成。</figcaption>
 </figure>
 
@@ -124,5 +124,7 @@ toc: true
 一開始準備了一張 8GB 的 SD Card，相當有年份的一張卡，它的燒錄速度真的很慢，約20多分鐘，但系統都安裝好後，系統效能的反應還能接受。
 
 在安裝時，一開始使用方法二，但到 Validating 的作業時卻跳出錯誤，後來改用另一個燒錄程式 (Win32DiskImager) 就可以，不過上述的方法筆者試過也都正常。方法二的解壓映像檔方式，要注意的事是 SD Card 要先格式化 (Format) ，及解壓的軟件要慎選，官方寫說必須使用支援 ZIP64 ，後來使用 7zip 解壓縮就正常。
+
+方法一與方法二的安裝內容是有差異的，方法一的 Programming 程式多了一些，若要輕量客制則選方法二，若要研究且省點事則方法一嘍！
 
 ## 參考文章 ##

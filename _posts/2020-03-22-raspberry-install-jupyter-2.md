@@ -2,7 +2,7 @@
 title:  "本機連樹莓派Jupyter Notebook"
 excerpt: "在樹莓派安裝了Jupyter Notebook後，若只能在樹莓派用就不方便了，本篇介紹如何修改設定可以讓本機也能連到樹莓派的Jupyter Notebook喔！"
 header:
-  teaser: assets/images/raspberry-pi-jupyter-notebookapp-ip.png
+  teaser: assets/images/raspberrypi/raspberry-pi-jupyter-notebookapp-ip.png
 search: false
 categories: 
   - AIoT
@@ -14,7 +14,10 @@ tags:
 last_modified_at: 2020-03-22T21:00-00:00
 toc: true
 ---
-## 讓本機的電腦可以連樹莓派的Jupyter Notebook
+## 前置準備
+* [樹莓派安裝Raspbian作業系統（Windows篇）](/aiot/raspberry-raspbian-1-installation/)
+* [樹莓派安裝Jupyter Notebook](/aiot/raspberry-install-jupyter-1/)
+
 ### 1. 產生設定檔
 ```bash
 $ jupyter notebook --generate-config
@@ -51,7 +54,7 @@ $ sudo nano /home/pi/.jupyter/jupyter_notebook_config.py
 * 將 `c.NotebookApp.ip='localhost'` 的 `localhost` 修改成 `0.0.0.0`，如下圖。
 
 <figure>
-  <img src="{{ '/assets/images/raspberry-pi-jupyter-notebookapp-ip.png' | relative_url }}" alt="Raspberry Pi NotebookApp.ip">
+  <img src="{{ '/assets/images/raspberrypi/raspberry-pi-jupyter-notebookapp-ip.png' | relative_url }}" alt="Raspberry Pi NotebookApp.ip">
 </figure>
 
 * 按 [Ctrl](#link){: .btn .btn--primary } + [O](#link){: .btn .btn--primary } 存檔。

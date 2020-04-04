@@ -2,7 +2,7 @@
 title:  "樹莓派安裝Jupyter Notebook"
 excerpt: "Jupyter Notebook對於熟悉Python與數據分析的人員來說是必備的工具，一般都是在安裝電腦上，而樹莓派也支援這個工具的安裝！"
 header:
-  teaser: assets/images/raspberry-pi-install-jupyter-notebook.png
+  teaser: assets/images/raspberrypi/raspberry-pi-install-jupyter-notebook.png
 search: false
 categories: 
   - AIoT
@@ -16,8 +16,11 @@ last_modified_at: 2020-03-23T21:00-00:00
 toc: true
 ---
 <figure class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/raspberry-pi-install-jupyter-notebook.png" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/raspberrypi/raspberry-pi-install-jupyter-notebook.png" alt="">
 </figure> 
+
+## 前置準備
+* [樹莓派安裝Raspbian作業系統（Windows篇）](/aiot/raspberry-raspbian-1-installation/)
 
 ## 檢查 Python 版本
 在安裝好樹莓派時，內建就有 Python 了，只是預設的版本是多少？路徑又在哪？我們來看看
@@ -103,7 +106,7 @@ pip 20.0.2 from /home/pi/.local/lib/python3.7/site-packages/pip (python 3.7)
 ```bash
 $ sudo pip3 install jupyter
 ```
-不過筆者也有試過不用 `sudo` 安裝，安裝的指令是 `$ pip install jupyter` ，記住這時的 `pip` 是 `pip3` ，安裝時會有一些 WARNING 出現，但也是可以正常開啟 `jupyter notebook` ，執行程式也是正常，但曾有遇過 `kernel` 連接失敗的情況，不是很清楚是什麼情況，所以建議還是用 `sudo` 來安裝。要注意的是請用上述的命令安裝，，若是用 `$ sudo pip install jupyter` 就會收到下列的錯誤。
+不過筆者也有試過不用 `sudo` 安裝，安裝的指令是 `$ pip install jupyter` ，記住這時的 `pip` 是 `pip3` ，安裝時會有一些 WARNING 出現，但也是可以正常開啟 `jupyter notebook` ，執行程式也是正常，但曾有遇過 `kernel` 連接失敗的情況，不是很清楚是什麼情況，所以建議還是用 `sudo` 來安裝。要注意的是請用上述的命令安裝，若是用 `$ sudo pip install jupyter` 就會收到下列的錯誤。
 ```
 jupyter-console requires Python '>=3.5' but the running Python is 2.7.16
 ```
@@ -114,7 +117,7 @@ $ jupyter notebook
 ```
 這時會在樹莓派自動開啟瀏覽器進入 Jupyter Notebook，也可以複製URL到本機電腦，但必須先修改設定檔才能遠端連結，修改的說明如下一個步驟。
 <figure class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/raspberry-pi-jupyter-notebook.png" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/raspberrypi/raspberry-pi-jupyter-notebook.png" alt="">
 </figure> 
 
 ## 心得

@@ -2,7 +2,7 @@
 title:  "在樹莓派建立Python虛擬環境"
 excerpt: "在本機電腦都用 conda 來建立虛擬環境，且可以用它的 IDE 建立，但 conda 太肥了，在樹莓派裡就用 Python 的指令來建立嘍。"
 header:
-  teaser: assets/images/raspberry-pi-python-create-env.png
+  teaser: assets/images/raspberrypi/raspberry-pi-python-create-env.png
 search: false
 categories: 
   - AIoT
@@ -18,6 +18,8 @@ toc: true
 根據筆者接觸 Python 的少少經驗來說，就已經吃了不少虧，都是因為運行的程式版本的差異導致異常，因此為了讓程式能運作正常，建立虛擬環境也就變得是必要的，在樹莓派建虛擬環境並不是用 Anaconda 來建立， 以樹莓派這樣的硬體等級就讓我打消安裝 Anaconda，還是輕量化的安裝就好，沒有必要安裝一堆你用不到的物件。
 
 ## 前置準備
+* [樹莓派安裝Raspbian作業系統（Windows篇）](/aiot/raspberry-raspbian-1-installation/)
+* [樹莓派安裝Jupyter Notebook](/aiot/raspberry-install-jupyter-1/)
 * 建立安裝的路徑，之後可能會有多個虛擬環境，所以我們集中在 `~/Documents/envs` 的這個目錄下。
 ```bash
 $ cd ~/Documents

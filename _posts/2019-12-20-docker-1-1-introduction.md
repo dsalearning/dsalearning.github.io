@@ -3,7 +3,7 @@ title: "1.1 Docker簡介"
 permalink: /docker/introduction/
 excerpt: "很多人都覺得 Docker是個新技術，其實不然，Docker除了其開發語言用 go比較新外，其實它還真不是個新東西，也就是個新瓶裝舊酒的東西，所謂的 The New 「Old Stuff」。"
 header:
-  teaser: assets/images/docker-1-1-instroduction-logo.png
+  teaser: assets/images/docker/docker-1-1-instroduction-logo.png
 last_modified_at: 2019-12-20T13:00:00-05:00
 toc: true
 categories:
@@ -34,7 +34,7 @@ author_profile: false
 
 ## Docker 軟體貨櫃運作架構
 <figure>
-  <img src="{{ '/assets/images/01-4-docker-simple-architecture.png' | relative_url }}" alt="Docker軟體貨櫃運作架構">
+  <img src="{{ '/assets/images/docker/01-4-docker-simple-architecture.png' | relative_url }}" alt="Docker軟體貨櫃運作架構">
 </figure>
 1. Docker Daemon 只負責 Container 的建立，啟動，停止，移除及監控
 2. Container 運作架構，是由 Linux 早已存在的核心模組 (Namespace, Cgroup, ..) 組成
