@@ -34,7 +34,7 @@ toc: true
 你也可以在這選擇介面的語言，所以筆者這裡就切換到中文嘍。
 
 ### 變更主題
-以現流行在黑色主題的趨勢，且眼睛看了也是真的比較舒服啦， Thonny 也有黑色主題可以選喔~
+以現在流行黑色主題的趨勢，且眼睛看了也是真的比較舒服啦， Thonny 也有黑色主題可以選喔~
 <figure class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/raspberrypi/raspberry-pi-thonny-python-ide.png" alt="">
 </figure> 
