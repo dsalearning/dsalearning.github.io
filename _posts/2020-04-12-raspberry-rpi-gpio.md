@@ -1,6 +1,6 @@
 ---
 title:  "樹莓派 RPi.GPIO 使用說明"
-excerpt: "GPIO（General Purpose I/O Ports）意思是通用輸入/輸出埠，也就是一些針腳可以通過它們輸出高低電平或者通過它們讀入針腳的狀態，以達控制硬體設備的功能。"
+excerpt: "GPIO（General Purpose I/O Ports）意思是通用輸入/輸出埠，也就是一些針腳可以通過它們輸出高電位或者低電位，掌握了 GPIO 就相當於掌握了硬體的控制。"
 header:
   teaser: assets/images/raspberrypi/raspberry-pi-GPIO-Header-with-Photo-702x336.png
 search: false
@@ -18,7 +18,7 @@ last_modified_at: 2020-04-02T21:00-00:00
 toc: true
 ---
 
-學習樹莓派的第一個模組就是 `RPi.GPIO` ，什麼是 GPIO ? GPIO（General Purpose I/O Ports）意思是通用輸入/輸出埠，也就是一些針腳可以通過它們輸出高低電平或者通過它們讀入針腳的狀態，以達控制硬體設備的功能，例如控制 LED 燈開燈熄、蜂嗚器的聲響等，所以掌握了 GPIO 就相當於掌握了硬體的控制。
+學習樹莓派的第一個模組就是 `RPi.GPIO` ，什麼是 GPIO ? GPIO（General Purpose I/O Ports）意思是通用輸入/輸出埠，也就是一些針腳可以通過它們輸出高電位或者低電位，可以供使用者由程式控制自由使用，與裝置進行通訊，達到控制裝置的目的。既然一個針腳可以用於輸入、輸出或其他特殊功能，那麼一定有暫存器用來選擇這些功能。對於輸入，一定可以透過讀取某個暫存器來確定針腳電位的高低；對於輸出，一定可以透過寫入某個暫存器來讓這個針腳輸出高電位或者低電位；對於其他特殊功能，則有另外的暫存器來控制它們，所以掌握了 GPIO 就相當於掌握了硬體的控制。
 
 <figure class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/raspberrypi/raspberry-pi-GPIO-Header-with-Photo-702x336.png" alt="">
@@ -168,9 +168,18 @@ chan_list = [11,12]
 ```python
 GPIO.setup(25, GPIO.OUT)
 ```
-若去 print() 該屬性則會得到值為 `0` ，也就是 boolean 值的 False，所以也可以用 `False` 或 `0` 填入，但為了讓程式的可讀性好，請還是使用屬性名稱的方式。
+若去 print() 該屬性則會得到值為 `0` ，相當於是 boolean 值的 False，所以也可以用 `False` 填入，但為了讓程式的可讀性好，請還是使用屬性名稱的方式。
+```python
+print(GPIO.OUT)
+print(type(GPIO.OUT))
+```
+回傳結果如下
+```
+0
+<class 'int'>
+```
 
-`GPIO.IN` 想要獲取針腳的狀態就將針腳設定為輸入，
+`GPIO.IN` 想要獲取針腳的狀態就將針腳設定為輸入，筆者認為這些傳感器輸出訊號，在樹莓派要接收就設為輸入。設定都跟上面的 `GPIO.OUT` 語法一樣。
 
 `initial`
 
@@ -180,17 +189,33 @@ GPIO.setup(25, GPIO.OUT)
 
 ### output()
 
-### HIGH與LOW
-
 ### cleanup()
 
 ### setwarnings()
 
+## 範例
+### A. 使用 `chan_list` 
+設定針腳 24,25 (BCM編號) 為輸出，同時設定這二個針腳的輸出，本範例是將 2 個 LED 都亮 3 秒後輪流亮 1 秒。
+```python
+#實作 ： 2個LED都亮3秒後輪流亮1秒
+import RPi.GPIO as GPIO
+import time
 
+chan_list = [24,25]
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(chan_list,GPIO.OUT)
+GPIO.output(chan_list, GPIO.HIGH) #全部燈亮
+time.sleep(3)
+while True:
+    GPIO.output(chan_list, (GPIO.HIGH, GPIO.LOW)) #24 亮; 25 暗
+    time.sleep(1))
+    GPIO.output(chan_list, (GPIO.LOW, GPIO.HIGH)) #24 暗; 25 亮
+    time.sleep(1)
+```
+{% include video id="WvCg-ieOsiY" provider="youtube" %}
 
 [^rpi-gpio]: [A Python module to control the GPIO on a Raspberry Pi](https://sourceforge.net/p/raspberry-gpio-python/wiki/BasicUsage/)
 
-## 心得
 
 
 ## 參考文章
