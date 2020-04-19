@@ -14,7 +14,7 @@ tags:
   - Thonny
   - GPIO
   - LED
-last_modified_at: 2020-04-02T21:00-00:00
+last_modified_at: 2020-04-19T21:00-00:00
 toc: true
 ---
 
@@ -39,8 +39,97 @@ toc: true
 | 樹莓派 | 1 | Raspberry Pi 4 Model B (4G) | 就只是現在頂規是這個版本，用三代的也可以 |
 | 麵包板 | 1 | 不限 | 測試時容易連結 |
 | 杜邦線 | 1 | 不限 | 保證沒有斷芯就好 |
-| LED燈 | 1 | 不限 | 測試此設備能發光閃爍 |
-| 電阻 | 1 | 10K | 為了不讓 LED 燒掉 |
+| LED燈 | 2 | 不限 | 測試此設備能發光閃爍 |
+| 電阻 | 2 | 10K | 為了不讓 LED 燒掉 |
+
+## 檢查 wiringPi 版本與升級
+
+由於樹莓派因版本不同，其各針腳的定義也會有些許的差異，那是否能在樹莓派裡就得知呢？ 可以的，但你可能跟筆者一樣遇到 Pi 4B 版需要升級的情況，首先檢查一下版本。
+```bash
+$ gpio -v
+```
+回傳結果如下，是 `2.50` 版。
+```
+pi@raspberrypi:~ $ gpio -v
+gpio version: 2.50
+Copyright (c) 2012-2018 Gordon Henderson
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type: gpio -warranty
+
+Raspberry Pi Details:
+  Type: Unknown17, Revision: 02, Memory: 0MB, Maker: Sony 
+  * Device tree is enabled.
+  *--> Raspberry Pi 4 Model B Rev 1.2
+  * This Raspberry Pi supports user-level GPIO access.
+```
+查看各針腳編號的命令如下：
+```bash
+$ gpio readall
+```
+回傳結果如下
+```
+pi@raspberrypi:~ $ gpio readall
+Oops - unable to determine board type... model: 17
+```
+這個問題是 `wiringPi` 模組版本的問題，所以如是你也跟筆者一樣是 Pi 4B版且 `wiringPi` 版本是 `2.50` 版，那麼就跟著筆者按照[官網指引](http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b/)升級即可，命令如下:
+```none
+cd /tmp
+wget https://project-downloads.drogon.net/wiringpi-latest.deb
+sudo dpkg -i wiringpi-latest.deb
+```
+
+更新好後，再來檢查一次版本
+```bash
+$ gpio -v
+```
+這時候看到版本已更新到 `2.52` 了。
+```
+pi@raspberrypi:/tmp $ gpio -v
+gpio version: 2.52
+Copyright (c) 2012-2018 Gordon Henderson
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type: gpio -warranty
+
+Raspberry Pi Details:
+  Type: Pi 4B, Revision: 02, Memory: 4096MB, Maker: Sony 
+  * Device tree is enabled.
+  *--> Raspberry Pi 4 Model B Rev 1.2
+  * This Raspberry Pi supports user-level GPIO access.
+```
+看看 Pi 4B 版的各腳位對應吧。
+```bash
+$ gpio readall
+```
+這時回傳的結果已可以看到 Pi 4B 版的各腳位編號了
+```
+pi@raspberrypi:/tmp $ gpio readall
+ +-----+-----+---------+------+---+---Pi 4B--+---+------+---------+-----+-----+
+ | BCM | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | BCM |
+ +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+
+ |     |     |    3.3v |      |   |  1 || 2  |   |      | 5v      |     |     |
+ |   2 |   8 |   SDA.1 | ALT0 | 1 |  3 || 4  |   |      | 5v      |     |     |
+ |   3 |   9 |   SCL.1 | ALT0 | 1 |  5 || 6  |   |      | 0v      |     |     |
+ |   4 |   7 | GPIO. 7 |   IN | 1 |  7 || 8  | 1 | ALT5 | TxD     | 15  | 14  |
+ |     |     |      0v |      |   |  9 || 10 | 1 | ALT5 | RxD     | 16  | 15  |
+ |  17 |   0 | GPIO. 0 |   IN | 0 | 11 || 12 | 0 | IN   | GPIO. 1 | 1   | 18  |
+ |  27 |   2 | GPIO. 2 |   IN | 0 | 13 || 14 |   |      | 0v      |     |     |
+ |  22 |   3 | GPIO. 3 |   IN | 0 | 15 || 16 | 0 | IN   | GPIO. 4 | 4   | 23  |
+ |     |     |    3.3v |      |   | 17 || 18 | 0 | IN   | GPIO. 5 | 5   | 24  |
+ |  10 |  12 |    MOSI | ALT0 | 0 | 19 || 20 |   |      | 0v      |     |     |
+ |   9 |  13 |    MISO | ALT0 | 0 | 21 || 22 | 0 | IN   | GPIO. 6 | 6   | 25  |
+ |  11 |  14 |    SCLK | ALT0 | 0 | 23 || 24 | 1 | OUT  | CE0     | 10  | 8   |
+ |     |     |      0v |      |   | 25 || 26 | 1 | OUT  | CE1     | 11  | 7   |
+ |   0 |  30 |   SDA.0 |   IN | 1 | 27 || 28 | 1 | IN   | SCL.0   | 31  | 1   |
+ |   5 |  21 | GPIO.21 |   IN | 1 | 29 || 30 |   |      | 0v      |     |     |
+ |   6 |  22 | GPIO.22 |   IN | 1 | 31 || 32 | 0 | IN   | GPIO.26 | 26  | 12  |
+ |  13 |  23 | GPIO.23 |   IN | 0 | 33 || 34 |   |      | 0v      |     |     |
+ |  19 |  24 | GPIO.24 |   IN | 0 | 35 || 36 | 0 | IN   | GPIO.27 | 27  | 16  |
+ |  26 |  25 | GPIO.25 |   IN | 0 | 37 || 38 | 0 | IN   | GPIO.28 | 28  | 20  |
+ |     |     |      0v |      |   | 39 || 40 | 0 | IN   | GPIO.29 | 29  | 21  |
+ +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+
+ | BCM | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | BCM |
+ +-----+-----+---------+------+---+---Pi 4B--+---+------+---------+-----+-----+
+```
 
 ## 安裝 RPi.GPIO
 
@@ -181,21 +270,59 @@ print(type(GPIO.OUT))
 
 `GPIO.IN` 想要獲取針腳的狀態就將針腳設定為輸入，筆者認為這些傳感器輸出訊號，在樹莓派要接收就設為輸入。設定都跟上面的 `GPIO.OUT` 語法一樣。
 
-`initial`
-
-
-
-### input()
+`initial` 為針腳設定預設值，例如下方範例為設定輸出的針腳同時給予高電位。
+```python
+GPIO.setup(channel, GPIO.OUT, initial=GPIO.HIGH)
+```
+相當於下面語法
+```python
+GPIO.setup(channel, GPIO.OUT)
+GPIO.output(channel,GPIO.HIGH)
+```
 
 ### output()
+前面的範例已使用到 `output()` ，意思就是設定針對輸出的狀態是高電位還是低電位，這樣就可以讓 LED 燈亮或熄滅，或者驅動或停止驅動裝置。
+```python
+GPIO.output(channel,GPIO.HIGH)
+```
+
+### input()
+當針腳已被設定高低電位時，可以用此函式取得該針腳的當下狀態為何，這樣就可以進一步有邏輯去判斷了。
+```python
+if GPIO.input(channel):
+    print('HIGH')
+else:
+    print('LOW')
+```
 
 ### cleanup()
+好的程序猿就要懂得釋放資源，這樣才不會成為技術債或損壞樹莓派，釋放的命令如下：
+```python
+GPIO.cleanup()
+```
+**注意！** GPIO.cleanup()只會清理執行腳本裡使用過的 GPIO 腳位，也會清除正在使用的編號規則。
+{: .notice--danger}
 
 ### setwarnings()
+當檢測到某個針腳己經被設置為非預設值時，你會得到一個警告。如果要停用這個警告，就使用這個函式即可停止。
+```python
+GPIO.setwarnings(False)
+```
+例如筆者的第一個範例 [LED閃爍](/aiot/raspberry-rpi-gpio-led-blink/)，第一次執行時並沒有警告出現，當再按一次執行時，就會出現如下的警告：
+```
+blink.py:7: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(25,GPIO.OUT,initial=GPIO.LOW)
+```
+
+### wait_for_edge()
+待寫
+
+### event_detected()
+待寫
 
 ## 範例
 ### A. 使用 `chan_list` 
-設定針腳 24,25 (BCM編號) 為輸出，同時設定這二個針腳的輸出，本範例是將 2 個 LED 都亮 3 秒後輪流亮 1 秒。
+設定針腳 24,25 (BCM編號) 為輸出，同時設定這二個針腳為輸出，本範例是將 2 個 LED 一開始都亮 3 秒後輪流亮 1 秒。
 ```python
 #實作 ： 2個LED都亮3秒後輪流亮1秒
 import RPi.GPIO as GPIO
