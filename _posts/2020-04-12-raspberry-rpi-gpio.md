@@ -7,7 +7,6 @@ search: false
 categories: 
   - AIoT
 tags:
-  - RaspberryPi
   - 樹莓派
   - Python
   - 物聯網
@@ -71,7 +70,7 @@ $ gpio readall
 pi@raspberrypi:~ $ gpio readall
 Oops - unable to determine board type... model: 17
 ```
-這個問題是 `wiringPi` 模組版本的問題，所以如是你也跟筆者一樣是 Pi 4B版且 `wiringPi` 版本是 `2.50` 版，那麼就跟著筆者按照[官網指引](http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b/)升級即可，命令如下:
+這個問題是 `wiringPi` 模組版本的問題，所以如果你也跟筆者一樣是 Pi 4B版且 `wiringPi` 版本是 `2.50` 版，那麼就跟著筆者按照[官網指引](http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b/)升級即可，命令如下:
 ```none
 cd /tmp
 wget https://project-downloads.drogon.net/wiringpi-latest.deb

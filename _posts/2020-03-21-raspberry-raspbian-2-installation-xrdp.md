@@ -7,7 +7,6 @@ search: false
 categories: 
   - AIoT
 tags:
-  - RaspberryPi
   - 樹莓派
   - 遠端桌面
   - 物聯網

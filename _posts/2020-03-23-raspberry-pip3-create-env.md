@@ -7,7 +7,6 @@ search: false
 categories: 
   - AIoT
 tags:
-  - RaspberryPi
   - 樹莓派
   - Python
   - 物聯網
