@@ -1,6 +1,6 @@
 ---
 title:  "Firebase雲端資料庫 - 建立 Firebase 專案"
-excerpt: "Firebase 是 Google 的雲端資料庫，在這個平台建立物聯網的專案，讓網頁與 IoT 設備能存取這個資料庫。"
+excerpt: "Firebase 是 Google 的雲端資料庫，在這個平台建立物聯網的專案，讓網頁與 IoT 設備能存取這個資料庫，就能達到遠端控制的效果。"
 header:
   teaser: assets/images/google/firebase-create-project.png
 search: false
