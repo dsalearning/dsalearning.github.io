@@ -17,7 +17,7 @@ toc: true
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/google/firebase-realtime-db.png" alt="">
 </figure> 
 
-Firebase [^firebase] 是 Google 的雲端資料庫，資料是以 JSON 格式儲存的 NoSQL 資料庫，當用戶端 (iOS, Android, Web, Window, ...) 使用 firebase SDK 建構應用程式時，能夠即時的存儲與同步資料，任何連接的設備都可以在幾毫秒內收到更新，這樣不同的設備也能彼此溝通，這就有很多的創意可以發想了。也支援離線 (非同步)的存取，先儲存在本地的磁碟，當設備重新連線之後就開始同步，自動合併所有的衝突，本篇介紹怎麼建立資料庫與即時的操作。
+Firebase [^firebase] 是 Google 的雲端資料庫，資料是以 JSON 格式儲存的 NoSQL 資料庫，當用戶端 (iOS, Android, Web, Window, ...) 使用 firebase SDK 建構應用程式時，能夠即時的存儲與同步資料，任何連接的設備都可以在幾毫秒內收到更新，這樣不同的設備也能彼此溝通，這就有很多的創意可以發想了。也支援離線 (非同步)的存取，先儲存在本地的磁碟，當設備重新連線之後就開始同步，自動合併所有的衝突，本篇介紹怎麼建立資料庫。
 
 [^firebase]: [Firebase Realtime Database Introduction](https://firebase.google.com/docs/database?authuser=0)
 
@@ -51,7 +51,7 @@ Firebase [^firebase] 是 Google 的雲端資料庫，資料是以 JSON 格式儲
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/google/firebase-realtime-db-done.png" alt="">
 </figure> 
 
-Firebase 能夠支援 App 、 Web 、 前後端開發與物聯網的開發，你不用熟資料庫與 API 的開發就可以存取與使用，真是一個化繁為簡的產品，免費方案[^SparkPlan]有 1GB 空間、用量達 10GB/month ，對於入門的使用者來說已經足夠了。但要使用這個產品還是有些要先了解的，現在 Realtime Database 已建立好了，接下來就來看怎麼設計及它的安全性規則吧。
+Firebase 能夠支援 App 、 Web 、 前後端開發與物聯網的開發，你不用熟資料庫與 API 的開發就可以存取與使用，真是一個化繁為簡的產品，免費方案[^SparkPlan]有 1GB 空間、用量達 10GB/month ，對於入門的使用者來說已經足夠了。但要使用這個產品還是有些要先了解的，現在 Realtime Database 已建立好了，接下來就來看怎麼設計 [Realtime Database 的安全性規則](/databases/firebase-realtime-db-security/)吧。
 
 [^SparkPlan]: [Firebase Pricing plans](https://firebase.google.com/pricing/)
 
