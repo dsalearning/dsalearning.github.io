@@ -9,7 +9,7 @@ categories:
 tags:
   - Python
   - MSSQL
-last_modified_at: 2020-04-28T21:00-00:00
+last_modified_at: 2020-04-29T12:00-00:00
 toc: true
 ---
 
@@ -58,7 +58,7 @@ Successfully installed pymssql-2.1.4
 這時你可以再用檢查套件的命令再查看一下。
 
 ## 連線 MSSQL
-使用 pymssql 套件的 `connect()` 函式來連接到 MSSQL Database，並傳入 `host` 、 `user` 、 `password` 及 `database` 等四個參數，連接的命令如下。
+使用 pymssql 套件的 `connect()` 函式來連接到 MSSQL Database，並傳入 `server` 、 `user` 、 `password` 及 `database` 等四個參數，連接的命令如下。
 ```python
 import pymssql
 conn = pymssql.connect(
@@ -68,7 +68,7 @@ conn = pymssql.connect(
     , database='yourdatabase'
 )
 ```
-請自行替換這四個參數值
+請自行替換這四個參數值， `server` 參數可以是 Host Name 、Domain Name 與 IP 這三者其一，也可以改用 `host` 參數。
 
 ## 執行查詢
 使用 `conn.cursor()` 函式取得 `cursor` 物件 ， `cursor.execute()` 函式可用來擷取對 SQL Database 查詢的結果集，`cursor.fetchone()` 反覆查詢結果集。
