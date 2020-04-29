@@ -13,7 +13,7 @@ last_modified_at: 2020-04-28T21:00-00:00
 toc: true
 ---
 
-最近同事申請 MSSQL 資料庫權限，說要用 Python 連接，但他們都用 pymssql 套件，後來跟我說連不上時，我就請他改用 SQLAlchemy 測試，也提供的連線的語句，之後撥空做了這個測試是可以連線的，可能當時連線字串有問題或防火牆還沒通吧！接下來就來看看怎麼用 python 連接到 MSSQL吧。
+最近同事申請 MSSQL 資料庫權限，說要用 Python 連接，但他們都用 pymssql 套件，後來跟我說連不上時，我就請他改用 SQLAlchemy 測試，也提供的連線的語句，之後撥空做了這個測試是可以連線的，可能當時連線字串有問題或防火牆還沒通吧！接下來就來看看怎麼用 pymssql 連接到 MSSQL吧。
 
 ## 作業環境 ##
 * Windows 7
@@ -45,7 +45,7 @@ wincertstore 0.2
 ```
 還沒有安裝，輸入下列命令來安裝 pymssql 套件吧。
 ```bash
-$ pip install pymssql
+> pip install pymssql
 ```
 安裝的速度很快，回傳結果如下：
 ```
@@ -55,7 +55,7 @@ Collecting pymssql
 Installing collected packages: pymssql
 Successfully installed pymssql-2.1.4
 ```
-這時你可以再用檢查套件的命令查看一下。
+這時你可以再用檢查套件的命令再查看一下。
 
 ## 連線 MSSQL
 使用 pymssql 套件的 `connect()` 函式來連接到 MSSQL Database，並傳入 `host` 、 `user` 、 `password` 及 `database` 等四個參數，連接的命令如下。
@@ -71,7 +71,7 @@ conn = pymssql.connect(
 請自行替換這四個參數值
 
 ## 執行查詢
-使用 conn.cursor() 函式取得 `cursor` 物件 ， cursor.execute() 函式可用來擷取對 SQL Database 查詢的結果集，cursor.fetchone() 反覆查詢結果集。
+使用 `conn.cursor()` 函式取得 `cursor` 物件 ， `cursor.execute()` 函式可用來擷取對 SQL Database 查詢的結果集，`cursor.fetchone()` 反覆查詢結果集。
 ```python
 import pymssql
 
