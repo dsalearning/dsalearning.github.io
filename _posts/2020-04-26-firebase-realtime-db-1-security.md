@@ -159,7 +159,7 @@ Realtime Database Rules[^db_security] 具有類似 JavaScript 的語法，定義
 
 那剛才的安全性規則有設定了 `/aiotfarm/Demo/` 這個路徑是可以讀寫，接著測試看看吧！
 1. 模擬類型： read
-2. 位置： /aiotfarm/Demo/$uid ，這裡請特別**<font color=red>留意大小寫</font>**是有差異的。
+2. 位置： /aiotfarm/Demo/$uid ，這裡請特別**留意大小寫**是有差異的。
 3. 已驗證：開啟。
 4. 供應商：預設帶入的 Google 就可以。
 5. UID：當通過 Firebase 身份驗證後就會得到的用戶 ID ，把這組 ID 加入到位置的路徑。
@@ -239,7 +239,7 @@ Firebase 的規則採用「**淺層判斷至深層**」[^security_sort]的做法
 
 接著來測試寫入的結果吧。
 1. 模擬類型： set
-2. 位置： /aiotfarm/Demo/$uid ，這裡請特別**<font color=red>留意大小寫</font>**是有差異的。
+2. 位置： /aiotfarm/Demo/$uid ，這裡請特別**留意大小寫**是有差異的。
 3. 資料：注意屬性值只有 `true` 或 `false` 。
 ```json
 {
@@ -257,6 +257,11 @@ Firebase 的規則採用「**淺層判斷至深層**」[^security_sort]的做法
   <a href="/assets/images/google/firebase-realtime-db-security-rules-valid44.png"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/google/firebase-realtime-db-security-rules-valid44.png" alt=""></a>
 </figure> 
 
-那麼測試失敗就留給讀者自己測試嘍。
+那麼來測試失敗，把 `status` 屬性值改為字串的 `"false"`，結果如下。
+
+<figure class="align-center">
+  <a href="/assets/images/google/firebase-realtime-db-security-rules-valid45.png"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/google/firebase-realtime-db-security-rules-valid45.png" alt=""></a>
+</figure> 
+
 
 ## 參考文章
