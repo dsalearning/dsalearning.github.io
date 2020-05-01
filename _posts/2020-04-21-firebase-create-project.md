@@ -1,6 +1,6 @@
 ---
 title:  "Firebase雲端資料庫 - 建立 Firebase 專案"
-excerpt: "Firebase 是 Google 的雲端資料庫，在這個平台建立物聯網的專案，讓網頁與 IoT 設備能存取這個資料庫，就能達到遠端控制的效果。"
+excerpt: "Firebase 是 Google 的雲端資料庫，在這個平台建立物聯網的專案，讓網頁與 IoT 設備能存取這個資料庫，就能達到遠端控制的效果，首先先來建立 Firebase 專案。"
 header:
   teaser: assets/images/google/firebase-create-project.png
 search: false
@@ -10,7 +10,7 @@ tags:
   - Firebase
   - Google
   - 雲端資料庫
-last_modified_at: 2020-04-25T21:00-00:00
+last_modified_at: 2020-04-26T21:00-00:00
 toc: false
 ---
 對於每天接觸資料庫的我來說，雲端資料庫的應用還是感到很好奇，想要使用 Firebase 就必需建立 Firebase 專案， Firebase 專案就像一個容器，可以容納你的 iOS 、 Android 和網路應用程式。
@@ -26,7 +26,7 @@ Firebase 專案也就是 Cloud 專案，透過 Firebase 主控台建立 Firebase
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/google/firebase-create-project.png" alt="">
 </figure> 
 **Step 1**
-1. 輸入專案名稱，名稱**只能使用字母、數字、空格和以下字元：-!'"**，若輸入了不合法的字元也會提示你，且不得少於 4 個字元，這裡的專案名稱算是對外顯示的別名。
+1. 輸入專案名稱，名稱**只能使用字母、數字、空格和以下字元：-!'"**，若輸入了不合法的字元也會提示你，且不得少於 4 個字元，這裡的專案名稱算是對外顯示的別名，筆者這裡建立的專案名稱是 AIoTFarm ，之後用這個專案來練習**智慧種植**。
 2. 勾選接受 Firebase 條款。
 3. 點選[繼續](#link){: .btn .btn--info}
 4. 專案 ID (可略)，如果你輸入的專案 ID 在系統裡沒有重複，專案 ID 就會等於你的專案名稱，若是重複了，系統會自動在名稱之後加上編碼 ID ，若你不喜歡也可以去修改它，但有下列規則：
