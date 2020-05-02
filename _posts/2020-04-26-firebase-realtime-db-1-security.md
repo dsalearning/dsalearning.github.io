@@ -10,6 +10,7 @@ tags:
   - Firebase
   - Google
   - 雲端資料庫
+  - 待寫
 last_modified_at: 2020-05-01T15:00-00:00
 toc: true
 ---
@@ -18,6 +19,10 @@ toc: true
 </figure> 
 
 前一篇提到 Firebase 的資料是以 JSON 格式儲存的 NoSQL 資料庫，如果你有接觸過 MongoDB 的話，那你對這樣的資料格式一定很熟悉，同樣都是 NoSQL的資料庫，以JSON格式儲存，至於如何才能設計出好的資料庫，這個應該是需要經驗的累積，而資料的安全性也十分重要，它不需要經驗累積，只要熟悉該產品的安全性規則就可以限制了，由於前一篇建立的資料庫預設是公開的，所以接下來看怎麼去限制權限來保護我們的資料吧。
+
+## 前置準備
+* [Firebase雲端資料庫 - 建立 Firebase 專案](/databases/firebase-create-project/)
+* [Firebase雲端資料庫 - Realtime Database安裝](/databases/firebase-realtime-db-installation/)
 
 ## Rule Types
 
@@ -28,7 +33,7 @@ Realtime Database Rules[^db_security] 具有類似 JavaScript 的語法，定義
 | `.read` |	boolean | 是否允許**讀取**資料， `true` 可以讀取；`false` 拒絕讀取。 |
 | `.write` | boolean | 是否允許**寫入**資料， `true` 可以寫入；`false` 拒絕寫入。 |
 | `.validate` | string	| 定義正確格式化後的值是什麼樣子，是否有子屬性、資料的類型等。 |
-| `.indexOn` | string	| 指定索引來支持排序和查詢，在資料量大的時候才會感覺效能的差異 |
+| `.indexOn` | string	| 指定索引來支持排序和查詢，在資料量大的時候才會感覺效能的差異。 |
 
 [^db_security]: [Understand Firebase Realtime Database Rules](https://firebase.google.com/docs/database/security?authuser=0)
 
@@ -263,5 +268,7 @@ Firebase 的規則採用「**淺層判斷至深層**」[^security_sort]的做法
   <a href="/assets/images/google/firebase-realtime-db-security-rules-valid45.png"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/google/firebase-realtime-db-security-rules-valid45.png" alt=""></a>
 </figure> 
 
+### 定義資料庫索引
+待寫。
 
 ## 參考文章
