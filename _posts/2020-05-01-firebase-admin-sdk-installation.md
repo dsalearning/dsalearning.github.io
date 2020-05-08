@@ -23,23 +23,21 @@ Firebase 也提供了在 Server 安裝 Admin SDK[^admin_sdk] 就可以使用，�
 
 [^admin_sdk]: [Add the Firebase Admin SDK to your server](https://firebase.google.com/docs/admin/setup?authuser=1)
 
+## 前置準備
+* [樹莓派安裝Raspbian作業系統（Windows篇）](/aiot/raspberry-raspbian-1-installation/)
+* [樹莓派安裝 Microsort 遠端桌面](/aiot/raspberry-raspbian-2-installation-xrdp/)
+* [在樹莓派建立Python虛擬環境](/aiot/raspberry-pip3-create-env/)
+* [Firebase雲端資料庫 - 建立 Firebase 專案](/databases/firebase-create-project/)
+
 ## 教具準備
 
 | 名稱 | 數量 | 規格 | 備註 | 
 |:-------|:-----:|:----|:-----| 
 | 樹莓派 | 1 | Raspberry Pi 4 Model B (4G) | 就只是現在頂規是這個版本，用三代的也可以 |
 
-## 前置準備
-* [樹莓派安裝Raspbian作業系統（Windows篇）](/aiot/raspberry-raspbian-1-installation/)
-* [樹莓派安裝 Microsort 遠端桌面](/aiot/raspberry-raspbian-2-installation-xrdp/)
-* [Firebase雲端資料庫 - 建立 Firebase 專案](/databases/firebase-create-project/)
-* [Firebase雲端資料庫 - Realtime Database安裝](/databases/firebase-realtime-db-installation/)
-* [在樹莓派建立Python虛擬環境](/aiot/raspberry-pip3-create-env/)
-
 ## 作業環境
 * 樹莓派：Raspbian
 * Windows 10 專業版 x64
-
 
 ## 安裝 SDK
 當你順利進入樹莓派後，打開終端機 (Terminal)，進入你建立的虛擬環境，可以參考筆者前置準備的文章，筆者是建立了名稱為 dsalearning 的虛擬環境，進入的命令如下：
