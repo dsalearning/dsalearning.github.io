@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "Alvin Lin"
-  avatar           : "/assets/images/bio-dsa.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/Alvin_bio.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : # "~ 腦袋記不住的事，就把它記錄下來吧。 ~"
   location         : "虛境, 神農谷"
   # email            : "alvinlin.dsa@gmail.com"
