@@ -31,6 +31,10 @@ EE:
       - title: "1-0 前言"
         url: /ee/1-0/
       - title: "1-1 電的特性"
-        url: /ee/1-1/
+        url: 
+      - title: "1-1-1 Part A 認識電、物質、分子與原子"
+        url: /ee/1-1-1-part-a/
+      - title: "1-1-2 Part B 原子理論"
+        url: /ee/1-1-2-part-b/
       - title: "1-2 電的單位"
         url: /ee/1-2/
