@@ -14,7 +14,7 @@ last_modified_at: 2020-10-20T15:00-00:00
 toc: true
 ---
 
-有時候安裝工具沒有想像中的順利，就像筆者遇到的問題，要在一台不能連上網際網路的電腦安裝 Reporting Services (RS) 的開發工具，以這個版本在當期可以用 Visual Studio 2017 與 Visual Studio 2019 來開發，但必需另外安裝 SQL Server Data Tools (以下簡稱 SSDT) 。
+有時候安裝工具沒有想像中的順利，就像筆者遇到的問題，要在一台不能連上網際網路的電腦安裝 Reporting Services (RS) 2016 的開發工具，以這個版本在當期可以用 Visual Studio 2017 與 Visual Studio 2019 來開發，但必需另外安裝 SQL Server Data Tools (以下簡稱 SSDT) 。
 
 SSDT 是一款新式開發工具，可用來建置 SQL Server 關聯式資料庫、Azure SQL 中的資料庫、Analysis Services (AS) 資料模型、Integration Services (IS) 套件和 Reporting Services (RS) 報表。 有了 SSDT，您便可設計和部署任何 SQL Server 內容類型，就像在 Visual Studio 中開發應用程式一樣容易。
 
@@ -102,7 +102,7 @@ D:\Temp> vs_sql.exe --layout D:\Temp\vs2017ssdt
 
   由於筆者要安裝的環境是英文環境，所以改用英文版的吧!
 
-  再改用英文版安裝時，再度發生了小插曲，在安裝完 SSRS 後，似乎有要求要重開機，筆者當時沒有注意就取消，結果就出現下圖。
+  在改用英文版安裝時，再度發生了小插曲，在安裝完 SSRS 後，似乎有要求要重開機，筆者當時沒有注意就取消，結果就出現下圖。
   <figure class="align-center">
     <img src="{{ site.url }}{{ site.baseurl }}/assets/images/mssql/ssdt-setup-reboot-error.png" alt="">
   </figure> 
