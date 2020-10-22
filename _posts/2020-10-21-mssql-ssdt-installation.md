@@ -58,9 +58,6 @@ D:\Temp> vs_sql.exe --layout D:\Temp\vs2017ssdt
 * 針對特定語言，請傳遞地區設定：`vs_sql.exe --layout c:\<filepath> --lang en-us` (一種語言 ~1 GB)。
 * 針對所有語言，請省略 `--lang` 引數：`vs_sql.exe --layout c:\<filepath>` (所有語言 ~3.9 GB)。
 
-**注意** 筆者當時安裝時，遇到安裝失敗，經查看 Log 後，發現是 `vc_redist.x64.exe` 安裝失敗，因為筆者沒有先了解[系統需求](https://docs.microsoft.com/zh-tw/visualstudio/productinfo/vs2017-system-requirements-vs)，所以安裝前請務必確保 `vc_redist.x64.exe` 已先安裝，請參考[最新支援的 Visual C++ 下載](https://support.microsoft.com/zh-tw/help/2977003/the-latest-supported-visual-c-downloads)。
-{: .notice--danger}
-
 完成前述步驟之後，就可以執行下列步驟進行離線安裝：
 
 * #1 執行 `vs_setup.exe --NoWeb`，以安裝 VS2017 Shell 及 SQL Server 資料專案。
@@ -80,6 +77,9 @@ D:\Temp> vs_sql.exe --layout D:\Temp\vs2017ssdt
 
   D:\Temp\vs2017> vs_setup.exe --NoWeb
   ```
+
+  **注意** 筆者當時安裝時，遇到安裝失敗，經查看 Log 後，發現是 `vc_redist.x64.exe` 安裝失敗，因為筆者沒有先了解[系統需求](https://docs.microsoft.com/zh-tw/visualstudio/productinfo/vs2017-system-requirements-vs)，所以安裝前請務必確保 `vc_redist.x64.exe` 已先安裝，請參考[最新支援的 Visual C++ 下載](https://support.microsoft.com/zh-tw/help/2977003/the-latest-supported-visual-c-downloads)。
+  {: .notice--danger}  
 
 * #2 從配置資料夾執行 `SSDT-Setup-ENU.exe /install`，並選取 SSIS/SSRS/SSAS。 a. 若要自動安裝，請執行 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`。
   這裡我採用選取的方式
@@ -102,7 +102,7 @@ D:\Temp> vs_sql.exe --layout D:\Temp\vs2017ssdt
 
   由於筆者要安裝的環境是英文環境，所以改用英文版的吧!
 
-  在改用英文版安裝時，再度發生了小插曲，在安裝完 SSRS 後，似乎有要求要重開機，筆者當時沒有注意就取消，結果就出現下圖。
+  在改用英文版安裝時，再度發生了小插曲，在安裝完 SSRS 還是 `vc_redist.x64.exe` 後，似乎有要求要重開機，筆者當時沒有注意就取消，結果就出現下圖。
   <figure class="align-center">
     <img src="{{ site.url }}{{ site.baseurl }}/assets/images/mssql/ssdt-setup-reboot-error.png" alt="">
   </figure> 
@@ -115,7 +115,8 @@ D:\Temp> vs_sql.exe --layout D:\Temp\vs2017ssdt
 若要查看可用的選項，請執行 `SSDT-Setup-ENU.exe /help`
 
 ## 心得
-當有訊息跳出時，還是要仔細看一下，不要慣性的「下一步」。
+* 安裝前先檢查系統安裝的要求，否則安裝失敗時再去看 Log 更花時間。
+* 當有訊息跳出時，還是要仔細看一下，不要慣性的「下一步」。
 
 
 ## 參考文章
