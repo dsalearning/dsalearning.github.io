@@ -19,13 +19,13 @@ locale                   : "zh-TW" #"en-US"
 title                    : "DSA Learning"
 title_separator          : "-"
 subtitle                 : "資料經整理與分析而萃煉為有價值的智慧" # site tagline that appears below site title in masthead
-name                     : "Alvin Lin"
+name                     : "林政文"
 description              : # "~ 腦袋記不住的事，就把它記錄下來吧。 ~"
 url                      : "https://dsalearning.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/dsa_logo_88x55.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/DSA_logo_88x88.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 300
@@ -107,10 +107,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Alvin Lin"
+  name             : "林政文"
   avatar           : "/assets/images/Alvin_bio.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : # "~ 腦袋記不住的事，就把它記錄下來吧。 ~"
-  location         : "虛境, 神農谷"
+  location         : "新北市, 板橋區"
   # email            : "alvinlin.dsa@gmail.com"
   links:
     - label: "Email"
@@ -177,6 +177,7 @@ footer:
 include:
   - .htaccess
   - _pages
+  - node_modules/uglifier/index.js
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -184,6 +185,7 @@ exclude:
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
+  - .jekyll-cache/
   - .sass-cache
   - assets/js/plugins
   - assets/js/_main.js
@@ -191,7 +193,9 @@ exclude:
   - Capfile
   - CHANGELOG
   - config
+  - gemfiles/
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
@@ -228,6 +232,7 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  math_engine: mathjax
 
 
 # Sass/SCSS
@@ -250,6 +255,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-latex
 
 # mimic GitHub Pages with --safe
 whitelist:
