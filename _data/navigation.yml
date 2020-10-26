@@ -38,3 +38,18 @@ EE:
         url: /ee/1-1-2-part-b/
       - title: "1-2 電的單位"
         url: /ee/1-2/
+
+# TensorFlow與Keras-Python深度學習應用實務
+tf.keras:
+  - title: 第1章 認識人工智慧與機器學習
+    children:
+      - title: "1-1 人工智慧概論"
+        url: /tf.keras/1-1/
+      - title: "1-2 認識機器學習"
+        url: /tf.keras/1-2/
+  - title: 第2章 建構 TensorFlow 與 Keras 開發環境
+    children:
+      - title: "2-1 認識 Keras 與 tf.keras"
+        url: /tf.keras/2-1-tf-keras-introduction/
+      - title: "2-2 建構 Python 深度學習的開發環境"
+        url: /tf.keras/2-2/
