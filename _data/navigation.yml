@@ -52,4 +52,4 @@ tf.keras:
       - title: "2-1 認識 Keras 與 tf.keras"
         url: /tf.keras/2-1-tf-keras-introduction/
       - title: "2-2 建構 Python 深度學習的開發環境"
-        url: /tf.keras/2-2/
+        url: /tf.keras/2-2-tf-keras-python-dl-env/
