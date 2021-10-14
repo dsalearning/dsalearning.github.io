@@ -1,16 +1,21 @@
 ---
 title:  "Firebase雲端資料庫 - 初探 Realtime Database 安全性規則"
+permalink: /firebase/realtime-db-1-security/
 excerpt: "Firebase Realtime Database 是透過 Rules (安全性規則)來讓資料多一層保護，規則除了可以設定欄位的讀取或寫入，也可以規範授權(auth)的使用者。"
 header:
   teaser: assets/images/google/firebase-realtime-db-security.png
 search: false
 categories: 
-  - Databases
+  - 樹莓派
 tags:
   - Firebase
   - Google
   - 雲端資料庫
+  - Database
   - 待寫
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-05-01T15:00-00:00
 toc: true
 ---
