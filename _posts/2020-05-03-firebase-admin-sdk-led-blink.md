@@ -1,19 +1,23 @@
 ---
 title:  "Firebase雲端資料庫 - Firebase 遠端控制 LED燈亮"
+permalink: /firebase/admin-sdk-led-blink/
 excerpt: "樹莓派安裝 Firebase Admin SDK 後，就可以呼叫其 API 與設備溝通，達到遠端控制的目的，只要變更 Firebase 資料庫的屬性值就可以讓LED 燈亮與燈熄。"
 header:
   teaser: assets/images/google/firebase-admin-sdk-led-blink.png
 search: false
 categories: 
-  - Databases
+  - 樹莓派
 tags:
   - Firebase
   - Google
   - 雲端資料庫
-  - 樹莓派
+  - Database
   - Python
   - LED
   - 待寫
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-05-03T21:00-00:00
 toc: true
 ---

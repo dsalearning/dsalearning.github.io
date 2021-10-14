@@ -1,16 +1,20 @@
 ---
 title:  "在樹莓派建立Python虛擬環境"
+permalink: /raspberry/pip3-create-env/
 excerpt: "在本機電腦都用 conda 來建立虛擬環境，且可以用它的 IDE 建立，但 conda 太肥了，在樹莓派裡就用 Python 的指令來建立嘍。"
 header:
   teaser: assets/images/raspberrypi/raspberry-pi-python-create-env.png
 search: false
 categories: 
-  - AIoT
-tags:
   - 樹莓派
+tags:
+  - IoT
   - Python
   - 物聯網
   - 虛擬環境
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-03-23T21:00-00:00
 toc: true
 ---

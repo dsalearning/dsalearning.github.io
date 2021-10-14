@@ -5,9 +5,8 @@ header:
   teaser: assets/images/pycharm_logo.png
 search: false
 categories: 
-  - Programming
-tags:
   - Python
+tags:
   - PyCharm
   - IDE
   - 安裝

@@ -131,21 +131,21 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github-alt"
       url: "https://github.com/dsalearning"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/dsalearning/"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/channel/UCnQ4mcqDcSVgtnGCCCw_MlQ"
-    - label: "Telegram"
-      icon: "fab fa-fw fa-telegram-plane"
-      url: "https://t.me/dsalearning"
-    - label: "Line"
-      icon: "fab fa-fw fa-line"
-      url: 
-    - label: "WeChat"
-      icon: "fab fa-fw fa-weixin"
-      url: 
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/dsalearning/"
+    # - label: "YouTube"
+    #   icon: "fab fa-fw fa-youtube"
+    #   url: "https://www.youtube.com/channel/UCnQ4mcqDcSVgtnGCCCw_MlQ"
+    # - label: "Telegram"
+    #   icon: "fab fa-fw fa-telegram-plane"
+    #   url: "https://t.me/dsalearning"
+    # - label: "Line"
+    #   icon: "fab fa-fw fa-line"
+    #   url: 
+    # - label: "WeChat"
+    #   icon: "fab fa-fw fa-weixin"
+    #   url: 
 
 # Site Footer
 footer:
@@ -162,15 +162,15 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github-alt"
       url: "https://github.com/dsalearning"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/dsalearning/"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://instagram.com/dsalearning/"
-    - label: "Telegram"
-      icon: "fab fa-fw fa-telegram-plane"
-      url: "https://t.me/dsalearning"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/dsalearning/"
+    # - label: "YouTube"
+    #   icon: "fab fa-fw fa-youtube"
+    #   url: "https://instagram.com/dsalearning/"
+    # - label: "Telegram"
+    #   icon: "fab fa-fw fa-telegram-plane"
+    #   url: "https://t.me/dsalearning"
 
 
 # Reading Files
@@ -331,24 +331,24 @@ defaults:
       share: true
       related: true
   # _docker
-  - scope:
-      path: ""
-      type: docker
-    values:
-      layout: single
-      read_time: false
-      author_profile: false
-      share: true
-      comments: true
-      sidebar:
-        nav: "docker"     
+  # - scope:
+  #     path: ""
+  #     type: docker
+  #   values:
+  #     layout: single
+  #     read_time: false
+  #     author_profile: false
+  #     share: true
+  #     comments: true
+  #     sidebar:
+  #       nav: "docker"     
   # _bigdata
-  - scope:
-      path: ""
-      type: bigdata
-    values:
-      layout: single
-      author_profile: false
-      read_time: false
-      comments: true
-      share: true
+  # - scope:
+  #     path: ""
+  #     type: bigdata
+  #   values:
+  #     layout: single
+  #     author_profile: false
+  #     read_time: false
+  #     comments: true
+  #     share: true

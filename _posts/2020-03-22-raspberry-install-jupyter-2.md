@@ -1,15 +1,19 @@
 ---
 title:  "本機連樹莓派Jupyter Notebook"
+permalink: /raspberry/install-jupyter-2/
 excerpt: "在樹莓派安裝了Jupyter Notebook後，若只能在樹莓派用就不方便了，本篇介紹如何修改設定可以讓本機也能連到樹莓派的Jupyter Notebook喔！"
 header:
   teaser: assets/images/raspberrypi/raspberry-pi-jupyter-notebookapp-ip.png
 search: false
 categories: 
-  - AIoT
-tags:
   - 樹莓派
+tags:
+  - IoT
   - 物聯網
   - JupyterNotebook
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-03-22T21:00-00:00
 toc: true
 ---

@@ -1,5 +1,5 @@
 ---
-title: "1.1 Docker簡介"
+title: "Docker簡介"
 permalink: /docker/introduction/
 excerpt: "很多人都覺得 Docker是個新技術，其實不然，Docker除了其開發語言用 go比較新外，其實它還真不是個新東西，也就是個新瓶裝舊酒的東西，所謂的 The New 「Old Stuff」。"
 header:
@@ -7,9 +7,8 @@ header:
 last_modified_at: 2019-12-20T13:00:00-05:00
 toc: true
 categories:
-  - 虛擬化
+  - Docker
 tags:
-  - docker
   - container
 sidebar:
   nav: "docker"

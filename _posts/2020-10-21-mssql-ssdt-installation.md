@@ -5,11 +5,11 @@ header:
   teaser: assets/images/mssql/ssdt-installation.png
 search: false
 categories: 
-  - Databases
+  - MSSQL
 tags:
   - SSDT
   - SSRS  
-  - MSSQL
+  - Database
 last_modified_at: 2020-10-20T15:00-00:00
 toc: true
 ---

@@ -1,15 +1,20 @@
 ---
 title:  "Firebase雲端資料庫 - Realtime Database安裝"
+permalink: /firebase/realtime-db-installation/
 excerpt: "Firebase 提供了 SDK 讓用戶端建構應用程式，能夠即時的存儲與同步資料，任何連接的設備都可以在幾毫秒內收到更新，這樣不同的設備也能彼此溝通，來看看怎麼安裝吧。"
 header:
   teaser: assets/images/google/firebase-realtime-db.png
 search: false
 categories: 
-  - Databases
+  - 樹莓派
 tags:
   - Firebase
   - Google
   - 雲端資料庫
+  - Database
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-04-28T21:00-00:00
 toc: true
 ---

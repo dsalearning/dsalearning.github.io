@@ -1,17 +1,21 @@
 ---
 title:  "Firebase雲端資料庫 - 樹莓派安裝Admin SDK"
+permalink: /firebase/admin-sdk-installation/
 excerpt: "Firebase 能夠提供毫秒級的回應，這樣樹莓派不但能夠把資料儲存這 Firebase 資料庫，同時不同的設備也能藉此溝通訊息，必要的條件就是安裝 Admin SDK了。"
 header:
   teaser: assets/images/google/firebase-admin-sdk.png
 search: false
 categories: 
-  - Databases
+  - 樹莓派
 tags:
   - Firebase
   - Google
   - 雲端資料庫
-  - 樹莓派
+  - Database
   - Python
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-05-01T21:00-00:00
 toc: true
 ---

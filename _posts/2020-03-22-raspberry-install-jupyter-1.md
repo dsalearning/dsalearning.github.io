@@ -1,16 +1,20 @@
 ---
 title:  "樹莓派安裝Jupyter Notebook"
+permalink: /raspberry/install-jupyter-1/
 excerpt: "Jupyter Notebook對於熟悉Python與數據分析的人員來說是必備的工具，一般都是在安裝電腦上，而樹莓派也支援這個工具的安裝！"
 header:
   teaser: assets/images/raspberrypi/raspberry-pi-install-jupyter-notebook.png
 search: false
 categories: 
-  - AIoT
-tags:
   - 樹莓派
+tags:
+  - IoT
   - 物聯網
   - JupyterNotebook
   - 安裝
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-03-23T21:00-00:00
 toc: true
 ---

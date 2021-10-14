@@ -1,16 +1,20 @@
 ---
 title:  "樹莓派安裝 Microsort 遠端桌面"
+permalink: /raspberry/2-installation-xrdp/
 excerpt: "管理電腦伺服器時，不是走到那台電腦的位置，而是遠端連線到那台電腦操控，而 Microsoft 遠端桌面就是筆者日常管理常使用的工具之一。"
 header:
   teaser: assets/images/raspberrypi/raspberry-pi-rdp-add-pc.png
 search: false
 categories: 
-  - AIoT
-tags:
   - 樹莓派
+tags:
+  - IoT
   - 遠端桌面
   - 物聯網
   - 安裝
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-03-24T21:00-00:00
 toc: true
 ---

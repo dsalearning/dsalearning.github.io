@@ -1,15 +1,20 @@
 ---
 title:  "Firebase雲端資料庫 - 建立 Firebase 專案"
+permalink: /firebase/create-project/
 excerpt: "Firebase 是 Google 的雲端資料庫，在這個平台建立物聯網的專案，讓網頁與 IoT 設備能存取這個資料庫，就能達到遠端控制的效果，首先先來建立 Firebase 專案。"
 header:
   teaser: assets/images/google/firebase-create-project.png
 search: false
 categories: 
-  - Databases
+  - 樹莓派
 tags:
   - Firebase
   - Google
   - 雲端資料庫
+  - Database
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-04-26T21:00-00:00
 toc: false
 ---

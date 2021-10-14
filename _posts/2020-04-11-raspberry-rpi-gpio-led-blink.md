@@ -1,18 +1,22 @@
 ---
 title:  "樹莓派控制入門篇 - LED閃爍"
+permalink: /raspberry/rpi-gpio-led-blink/
 excerpt: "控制樹莓派的 GPIO ，連結到麵包板上讓 LED 燈閃爍，這個 Lab 算是接觸硬體程式的 Hello World了，本次學習是控制 LED 亮一秒暗一秒的簡單控制。"
 header:
   teaser: assets/images/raspberrypi/lab/led-blink.png
 search: false
 categories: 
-  - AIoT
-tags:
   - 樹莓派
+tags:
+  - IoT
   - Python
   - 物聯網
   - Thonny
   - GPIO
   - LED
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-04-02T21:00-00:00
 toc: true
 ---

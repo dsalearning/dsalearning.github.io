@@ -1,16 +1,20 @@
 ---
 title:  "樹莓派安裝Raspbian作業系統（Windows篇）"
+permalink: /raspberry/1-installation/
 excerpt: "Raspberry Pi 4 出來了，和之前的版本最大的改變是多了 2GB/4GB 的記憶體版本可供選擇！"
 header:
   teaser: assets/images/raspberrypi/raspberry-pi-4-model-b.jpg
 search: false
 categories: 
-  - AIoT
-tags:
   - 樹莓派
+tags:
+  - IoT
   - Raspbian
   - 物聯網
   - 安裝
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-03-24T21:00-00:00
 toc: true
 ---

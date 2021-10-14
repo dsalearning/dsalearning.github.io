@@ -5,11 +5,11 @@ header:
   teaser: assets/images/mssql/tempdb-space-usage.png
 search: false
 categories: 
-  - Databases
+  - MSSQL
 tags:
   - tempdb
   - DMV
-  - MSSQL
+  - Database
 last_modified_at: 2020-10-26T15:00-00:00
 toc: true
 ---

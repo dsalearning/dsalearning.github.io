@@ -1,19 +1,23 @@
 ---
 title:  "樹莓派 RPi.GPIO 使用說明"
+permalink: /raspberry/rpi-gpio/
 excerpt: "GPIO（General Purpose I/O Ports）意思是通用輸入/輸出埠，也就是一些針腳可以通過它們輸出高電位或者低電位，掌握了 GPIO 就相當於掌握了硬體的控制。"
 header:
   teaser: assets/images/raspberrypi/raspberry-pi-GPIO-Header-with-Photo-702x336.png
 search: false
 categories: 
-  - AIoT
-tags:
   - 樹莓派
+tags:
+  - IoT
   - Python
   - 物聯網
   - Thonny
   - GPIO
   - LED
   - 待寫
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-04-19T21:00-00:00
 toc: true
 ---

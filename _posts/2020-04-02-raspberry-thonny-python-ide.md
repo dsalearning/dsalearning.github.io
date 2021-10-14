@@ -1,16 +1,20 @@
 ---
 title:  "初探樹莓派內建的 Thonny Python IDE"
+permalink: /raspberry/thonny-python-ide/
 excerpt: "Thonny 是專為初學者設計的 Python 集成開發環境，非常適合在樹莓派上學習 Python 時使用喔！"
 header:
   teaser: assets/images/raspberrypi/raspberry-pi-thonny-python-ide.png
 search: false
 categories: 
-  - AIoT
-tags:
   - 樹莓派
+tags:
+  - IoT
   - Python
   - 物聯網
   - Thonny
+sidebar:
+  nav: "raspberry"
+author_profile: false
 last_modified_at: 2020-04-02T21:00-00:00
 toc: true
 ---
