@@ -110,3 +110,21 @@ arduino nano33 iot:
         url: /arduino nano33 iot/1-2-samd-boards/
       - title: "1.3 使用 tinkercad 模擬器"
         url: /arduino nano33 iot/1-3-tinkercad/  
+  - title: WiFiNINA
+    children:
+      - title: "WiFiSSLClient"
+        url: /arduino nano33 iot/wifi-ssl-client-ifttt/
+      - title: "RGB LED"
+        url: 
+
+grafana:
+  - title: 1. 安裝
+    children:
+      - title: "建構 Grafana+Influxdb+Telegraf 監控系統(docker版)"
+        url: /grafana/influxdb-telegraf-docker/
+      - title: "建構 Grafana+Influxdb+Telegraf 監控系統(Ubuntu版)"
+        url: /grafana/influxdb-telegraf-ubuntu/
+  - title: 2. 使用
+    children:
+      - title: "建立 Grafana Dashboard"
+        url: /grafana/create-dashboard/  

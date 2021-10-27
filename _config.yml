@@ -116,9 +116,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope" #fas fa-fw fa-envelope-square
       url: mailto:alvinlin.dsa@gmail.com
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://alvinlin98.github.io"
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
+    #   url: "https://alvinlin98.github.io"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       url: "https://www.facebook.com/dsalearning"
