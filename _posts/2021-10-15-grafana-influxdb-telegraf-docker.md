@@ -376,8 +376,10 @@ $ docker logs telegraf -f
   urls = ["http://192.168.1.105:8086"]
   token = "直接把 Token 貼進來"
   organization = "dsalearning"
-  bucket = "dsa-bucket"
+  bucket = "win10-alvin"
 ```
+這裡使用的 bucket 是剛才建立的，是不同與 Linux 用的 dsa-bucket喔。
+
 把 `telegraf.exe` 安裝成 Windows 的服務吧，指令如下。
 ```powershell
 > .\telegraf.exe --service install --config "C:\Program Files\InfluxData\telegraf\telegraf.conf"
